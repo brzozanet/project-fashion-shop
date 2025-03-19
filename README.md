@@ -1,4 +1,4 @@
-# Projkt praktyczny - Shop online
+# Projekt praktyczny - Shop online
 
 Aby wystartować projekt pobierz repo, a następnie w terminalu wywołaj:
 
