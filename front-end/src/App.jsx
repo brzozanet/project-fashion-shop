@@ -1,4 +1,4 @@
-function App() {
+export function App() {
   return (
     <>
       <h1>Projekt praktyczny - Shop online</h1>
@@ -6,5 +6,3 @@ function App() {
     </>
   );
 }
-
-export default App;
