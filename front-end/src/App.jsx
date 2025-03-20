@@ -1,8 +1,9 @@
-export function App() {
+import { Layout } from "./components/Layout/Layout";
+
+export const App = () => {
   return (
     <>
-      <h1>Projekt praktyczny - Shop online</h1>
-      <p>Lorem ipsum</p>
+      <Layout />
     </>
   );
-}
+};

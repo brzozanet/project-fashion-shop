@@ -1,0 +1,13 @@
+.container {
+  height: 200px;
+  background: var(--color-text-default);
+  color: var(--color-white);
+  padding: 91px 905px 91px 905px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  font-weight: 400;
+}
