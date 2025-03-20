@@ -1,2 +1,12 @@
-.container {
+.mainMenu {
+}
+
+.mainMenuItem {
+  color: #7a7a7a;
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
 }

@@ -6,7 +6,7 @@ import css from "./MainMenu.module.css";
 export const MainMenu = () => {
   return (
     <>
-      <div className={css.container}>
+      <div className={css.mainMenu}>
         <ul className={css.mainMenuList}>
           {GENDERS.map((category) => {
             return (
