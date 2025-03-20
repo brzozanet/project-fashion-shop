@@ -1,0 +1,20 @@
+.container {
+  background-color: var(--color-theme-main);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuList {
+  height: 50px;
+  padding: 16px 0px 16px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.menuItem a {
+  color: var(--color-white);
+  font-weight: 400;
+}
