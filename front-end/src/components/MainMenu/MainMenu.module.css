@@ -1,12 +1,18 @@
 .mainMenu {
 }
 
+.mainMenuList {
+  display: flex;
+  gap: 1rem;
+}
+
 .mainMenuItem {
-  color: #7a7a7a;
-  font-family: Arial;
-  font-size: 16px;
-  font-style: normal;
+  color: var(--color-text-grey);
   font-weight: 700;
-  line-height: normal;
   text-transform: uppercase;
+}
+
+.mainMenuItem a:global(.active) {
+  border-bottom: 1px solid var(--color-text-default);
+  color: var(--color-text-default);
 }

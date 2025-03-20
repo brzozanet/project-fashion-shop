@@ -10,7 +10,11 @@ export const MainMenu = () => {
         <ul className={css.mainMenuList}>
           {GENDERS.map((category) => {
             return (
-              <NavLink key={nanoid()} className={css.mainMenuItem}>
+              <NavLink
+                key={nanoid()}
+                to={category.path}
+                className={css.mainMenuItem}
+              >
                 {category.name}
               </NavLink>
             );

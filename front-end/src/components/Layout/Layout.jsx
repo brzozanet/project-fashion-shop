@@ -14,8 +14,10 @@ export const Layout = () => {
         <TopBar>
           <MainMenu />
           <Logo />
-          <CurrencySelector />
-          <IconMenu />
+          <div>
+            <CurrencySelector />
+            <IconMenu />
+          </div>
         </TopBar>
         <CategoriesMenu />
       </MainContent>
