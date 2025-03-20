@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <>
       <div className={css.footer}>
-        <p className={css.footerCopyright}>Developed with ❤️ by brzoza.net</p>
+        <p>Developed with ❤️ by brzoza.net</p>
       </div>
     </>
   );

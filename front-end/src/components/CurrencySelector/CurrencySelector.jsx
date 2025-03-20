@@ -3,7 +3,12 @@
 export const CurrencySelector = () => {
   return (
     <>
-      <div>CurrencySelector</div>
+      <div>
+        <select>
+          <option value="PLN">PLN</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
     </>
   );
 };
