@@ -1,9 +1,11 @@
-// import css from "./Logo.module.css";
+import css from "./Logo.module.css";
 
 export const Logo = () => {
   return (
     <>
-      <div>Logo</div>
+      <div>
+        <p className={css.logoText}>TopSklep®</p>
+      </div>
     </>
   );
 };
