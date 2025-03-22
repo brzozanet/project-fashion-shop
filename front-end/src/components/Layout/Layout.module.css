@@ -1,0 +1,6 @@
+.currencyAndIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 1rem;
+}
