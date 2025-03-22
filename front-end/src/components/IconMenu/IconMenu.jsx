@@ -4,6 +4,8 @@ import BAG_ICON from "../../assets/iconBag.svg";
 import css from "./IconMenu.module.css";
 
 export const IconMenu = () => {
+  const cartItems = 2;
+
   return (
     <>
       <ul className={css.iconMenuList}>
@@ -14,7 +16,8 @@ export const IconMenu = () => {
         </li>
         <li>
           <Link to="/koszyk">
-            <img src={BAG_ICON} alt="Koszyk" title="Koszyk"></img>
+            <img src={BAG_ICON} alt="Koszyk" title="Koszyk" />
+            {cartItems}
           </Link>
         </li>
       </ul>
