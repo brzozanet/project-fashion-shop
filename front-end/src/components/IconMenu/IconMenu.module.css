@@ -4,3 +4,12 @@
   padding: 1rem;
   gap: 1rem;
 }
+
+.cartItems {
+  background-color: var(--color-yellow);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-weight: 700;
+  display: flex;
+}

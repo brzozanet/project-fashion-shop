@@ -17,7 +17,7 @@ export const IconMenu = () => {
         <li>
           <Link to="/koszyk">
             <img src={BAG_ICON} alt="Koszyk" title="Koszyk" />
-            {cartItems}
+            <div className={css.cartItems}>{cartItems}</div>
           </Link>
         </li>
       </ul>
