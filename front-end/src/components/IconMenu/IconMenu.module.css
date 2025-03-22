@@ -1,0 +1,5 @@
+.iconMenuList {
+  display: flex;
+  align-content: center;
+  gap: 1rem;
+}
