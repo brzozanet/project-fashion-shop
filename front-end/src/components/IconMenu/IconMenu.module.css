@@ -12,7 +12,7 @@
 .iconCounter {
   background-color: var(--color-yellow);
   border-radius: 50%;
-  width: 1, 25rem;
+  width: 1.25rem;
   height: 1.25rem;
   font-weight: 700;
   font-size: 0.6rem;
@@ -21,6 +21,6 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 0.5rem;
+  bottom: -0.5rem;
   right: -0.5rem;
 }
