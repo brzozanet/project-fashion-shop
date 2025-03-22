@@ -9,15 +9,15 @@ export const IconMenu = () => {
   return (
     <>
       <ul className={css.iconMenuList}>
-        <li>
+        <li className={css.iconMenuItem}>
           <Link to="/ulubione">
             <img src={HEART_ICON} alt="Ulubione" title="Ulubione"></img>
           </Link>
         </li>
-        <li>
+        <li className={css.iconMenuItem}>
           <Link to="/koszyk">
             <img src={BAG_ICON} alt="Koszyk" title="Koszyk" />
-            <div className={css.cartItems}>{cartItems}</div>
+            <div className={css.iconCounter}>{cartItems}</div>
           </Link>
         </li>
       </ul>
