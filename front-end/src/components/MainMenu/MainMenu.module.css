@@ -1,5 +1,8 @@
 .mainMenuList {
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
   gap: 1rem;
 }
 
@@ -7,9 +10,11 @@
   color: var(--color-text-grey);
   font-weight: 700;
   text-transform: uppercase;
+  padding: 1rem 0;
+  display: block;
 }
 
 .mainMenuItem a:global(.active) {
-  border-bottom: 1px solid var(--color-text-default);
+  border-bottom: 3px solid var(--color-text-default);
   color: var(--color-text-default);
 }
