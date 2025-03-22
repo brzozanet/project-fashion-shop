@@ -4,7 +4,7 @@ export const Logo = () => {
   return (
     <>
       <div>
-        <p className={css.logoText}>TopSklep®</p>
+        <h1 className={css.logoText}>React Shop Online®</h1>
       </div>
     </>
   );
