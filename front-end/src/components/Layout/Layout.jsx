@@ -6,7 +6,6 @@ import { Logo } from "../Logo/Logo";
 import { MainContent } from "../MainContent/MainContent";
 import { MainMenu } from "../MainMenu/MainMenu";
 import { TopBar } from "../TopBar/TopBar";
-import css from "./Layout.module.css";
 
 export const Layout = () => {
   return (
@@ -15,7 +14,7 @@ export const Layout = () => {
         <TopBar>
           <MainMenu />
           <Logo />
-          <div className={css.currencyAndIcons}>
+          <div>
             <CurrencySelector />
             <IconMenu />
           </div>
