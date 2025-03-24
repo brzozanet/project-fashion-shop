@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import HEART_ICON from "../../assets/iconHeart.svg";
-import BAG_ICON from "../../assets/iconBag.svg";
+import ICON_HEART from "../../assets/iconHeart.svg";
+import ICON_BAG from "../../assets/iconBag.svg";
 import css from "./IconMenu.module.css";
 
 export const IconMenu = () => {
@@ -11,12 +11,12 @@ export const IconMenu = () => {
       <ul className={css.iconMenuList}>
         <li className={css.iconMenuItem}>
           <Link to="/ulubione">
-            <img src={HEART_ICON} alt="Ulubione" title="Ulubione"></img>
+            <img src={ICON_HEART} alt="Ulubione" title="Ulubione"></img>
           </Link>
         </li>
         <li className={css.iconMenuItem}>
           <Link to="/koszyk">
-            <img src={BAG_ICON} alt="Koszyk" title="Koszyk" />
+            <img src={ICON_BAG} alt="Koszyk" title="Koszyk" />
             <div className={css.iconCounter}>{cartItems}</div>
           </Link>
         </li>
