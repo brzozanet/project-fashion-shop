@@ -1,8 +1,21 @@
 .categoriesMenu {
   background-color: var(--color-theme-main);
-  width: 100vw;
+  width: 100%;
+}
+
+.categoryList {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .categoryLink {
   color: var(--color-white);
+}
+
+.categoryLink a:global(.active) {
+  text-decoration: underline;
 }
