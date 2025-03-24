@@ -1,7 +1,8 @@
 .categoriesMenu {
   background-color: var(--color-theme-main);
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.categoryLink {
+  color: var(--color-white);
 }
