@@ -1,3 +1,6 @@
+.product {
+}
+
 .productTitle {
   font-size: var(--font-size-default);
   margin-bottom: 0.5rem;
@@ -9,6 +12,7 @@
 }
 
 .productPhotoContainer {
+  position: relative;
   width: 255px;
   height: 400px;
   margin-bottom: 0.5rem;
@@ -19,4 +23,10 @@
   height: 100%;
   object-fit: cover; /* wypełnia cały kontener, może przyciąć obraz */
   /* object-fit: contain; zachowuje proporcje, może zostawić puste miejsca */
+}
+
+.heartIcon {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
 }
