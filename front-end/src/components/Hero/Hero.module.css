@@ -13,3 +13,11 @@
   padding: 3rem 5rem;
   display: inline-block;
 }
+
+.promoTitle {
+  margin-bottom: 1rem;
+}
+
+.promoText {
+  margin-bottom: 2rem;
+}

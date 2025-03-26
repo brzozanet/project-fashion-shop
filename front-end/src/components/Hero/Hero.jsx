@@ -11,8 +11,8 @@ export const Hero = () => {
       >
         <CenteredContent>
           <div className={css.promo}>
-            <h2>Letnie promocje do -70%</h2>
-            <p>Tylko najlepsze okazje!</p>
+            <h2 className={css.promoTitle}>Letnie promocje do -70%</h2>
+            <p className={css.promoText}>Tylko najlepsze okazje!</p>
             <button>Sprawdź produkty</button>
           </div>
         </CenteredContent>
