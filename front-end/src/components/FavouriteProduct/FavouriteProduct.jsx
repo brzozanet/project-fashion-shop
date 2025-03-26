@@ -15,19 +15,21 @@ export const FavouriteProduct = ({ image, name, description, price }) => {
   return (
     <>
       <div className={css.favouriteProduct}>
-        <div className={css.favouritePhotoContainer}>
-          <img
-            src={image}
-            alt={name}
-            title={name}
-            className={css.favouritePhotoImg}
-          />
+        <div className={css.favouriteBox}>
+          <div className={css.favouritePhotoContainer}>
+            <img
+              src={image}
+              alt={name}
+              title={name}
+              className={css.favouritePhotoImg}
+            />
+          </div>
         </div>
-        <div>
+        <div className={css.favouriteBox}>
           <h3 className={css.favouriteTitle}>{name}</h3>
           <p>{truncateTextSmart(description, 100)}</p>
         </div>
-        <div>
+        <div className={css.favouriteBox}>
           <p>{price} zł</p>
         </div>
       </div>

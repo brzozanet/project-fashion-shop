@@ -1,10 +1,29 @@
 .favouriteProduct {
   border-bottom: 1px solid var(--color-text-default);
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.favouriteBox {
+}
+
+.favouriteBox:nth-child(1),
+.favouriteBox:nth-child(2) {
+  flex: 0 0 400px; /* nie rozciągaj, nie zmniejszaj, stała szerokość 200px */
+}
+
+/* Trzeci div wypełnia pozostałą przestrzeń */
+.favouriteBox:nth-child(3) {
+  flex: 1; /* rozciąga się na pozostałą przestrzeń */
+  margin-left: auto; /* tworzy zmienny odstęp od drugiego diva */
 }
 
 .favouritePhotoContainer {
   width: 85px;
   height: 140px;
+  margin-bottom: 1rem;
 }
 
 .favouritePhotoImg {
