@@ -8,7 +8,7 @@ export const Favourites = () => {
     <>
       <Layout>
         <CenteredContent>
-          <PageTitle>Favourites component</PageTitle>
+          <PageTitle>Ulubione</PageTitle>
           <FavouritesList />
         </CenteredContent>
       </Layout>

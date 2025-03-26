@@ -85,7 +85,14 @@ export const FavouritesList = () => {
     <>
       <div>
         {favouritesMockup.map((product) => {
-          return <FavouriteProduct />;
+          return (
+            <FavouriteProduct
+              image={product.photos[0]}
+              name={product.name}
+              description={product.description}
+              price={product.pricePLN}
+            />
+          );
         })}
       </div>
     </>
