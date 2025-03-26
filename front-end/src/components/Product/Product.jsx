@@ -4,7 +4,7 @@ import css from "./Product.module.css";
 export const Product = ({ name, price, photo }) => {
   return (
     <>
-      <Link to="" className={css.product}>
+      <Link to="">
         <div className={css.productPhotoContainer}>
           <img
             src={photo}
