@@ -1,11 +1,8 @@
-import { nanoid } from "nanoid";
-import { CenteredContent } from "../CenteredContent/CenteredContent";
-import { Product } from "../Product/Product";
-import { PageTitle } from "../PageTitle/PageTitle";
-import css from "./Bestsellers.module.css";
+import { FavouriteProduct } from "../FavouriteProduct/FavouriteProduct";
+// import css from "./FavouritesList.module.css";
 
-export const Bestsellers = () => {
-  const bestsellersMockup = [
+export const FavouritesList = () => {
+  const favouritesMockup = [
     {
       id: 26,
       gender: "women",
@@ -86,22 +83,10 @@ export const Bestsellers = () => {
 
   return (
     <>
-      <div className={css.bestsellers}>
-        <CenteredContent>
-          <PageTitle>Sprawdź nasze bestellery</PageTitle>
-          <div className={css.bestsellersList}>
-            {bestsellersMockup.map((product) => {
-              return (
-                <Product
-                  name={product.name}
-                  price={product.pricePLN}
-                  photo={product.photos[0]}
-                  key={nanoid()}
-                />
-              );
-            })}
-          </div>
-        </CenteredContent>
+      <div>
+        {favouritesMockup.map((product) => {
+          return <FavouriteProduct />;
+        })}
       </div>
     </>
   );
