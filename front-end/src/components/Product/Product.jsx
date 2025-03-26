@@ -10,7 +10,7 @@ export const Product = ({ name, price, photo }) => {
             src={photo}
             alt={name}
             title={name}
-            className={css.productPhoto}
+            className={css.productPhotoImg}
           />
           <div className={css.heartIcon}></div>
         </div>
