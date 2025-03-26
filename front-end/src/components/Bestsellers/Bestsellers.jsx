@@ -1,6 +1,7 @@
 import { nanoid } from "nanoid";
 import { CenteredContent } from "../CenteredContent/CenteredContent";
 import { Product } from "../Product/Product";
+import { PageTitle } from "../PageTitle/PageTitle";
 import css from "./Bestsellers.module.css";
 
 export const Bestsellers = () => {
@@ -87,7 +88,7 @@ export const Bestsellers = () => {
     <>
       <div className={css.bestsellers}>
         <CenteredContent>
-          <h2 className={css.bestsellersTitle}>Sprawdź nasze bestellery</h2>
+          <PageTitle>Sprawdź nasze bestellery</PageTitle>
           <div className={css.bestsellersList}>
             {bestsellersMockup.map((product) => {
               return (
