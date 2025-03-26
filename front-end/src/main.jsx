@@ -2,11 +2,11 @@ import "./styles/globals.css";
 import "./styles/theme.css";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { App } from "./App.jsx";
+import { MainPage } from "./views/MainPage.jsx";
 
 const router = createBrowserRouter([
   {
-    element: <App />,
+    element: <MainPage />,
     path: "/",
   },
 ]);
