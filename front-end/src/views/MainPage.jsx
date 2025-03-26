@@ -1,4 +1,5 @@
 // import css from "./MainPage.module.css";
+import { Bestsellers } from "../components/Bestsellers/Bestsellers";
 import { Hero } from "../components/Hero/Hero";
 import { Layout } from "../components/Layout/Layout";
 
@@ -7,6 +8,7 @@ export const MainPage = () => {
     <>
       <Layout>
         <Hero />
+        <Bestsellers />
       </Layout>
     </>
   );
