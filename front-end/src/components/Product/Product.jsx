@@ -1,13 +1,21 @@
+import { Link } from "react-router-dom";
 import css from "./Product.module.css";
 
-export const Product = () => {
+export const Product = ({ name, price, photo }) => {
   return (
     <>
-      <div className={css.product}>
-        <img src="" alt="" title="" />
-        <h3>Product name</h3>
-        <p>Product price</p>
-      </div>
+      <Link to="">
+        <div className={css.productPhotoContainer}>
+          <img
+            src={photo}
+            alt={name}
+            title={name}
+            className={css.productPhoto}
+          />
+        </div>
+        <h3 className={css.productTitle}>{name}</h3>
+        <p className={css.productPrice}>{price} zł</p>
+      </Link>
     </>
   );
 };

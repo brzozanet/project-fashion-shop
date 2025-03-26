@@ -1,6 +1,7 @@
+import { nanoid } from "nanoid";
 import { CenteredContent } from "../CenteredContent/CenteredContent";
 import { Product } from "../Product/Product";
-// import css from "./Bestsellers.module.css"
+import css from "./Bestsellers.module.css";
 
 export const Bestsellers = () => {
   const bestsellersMockup = [
@@ -12,7 +13,7 @@ export const Bestsellers = () => {
       productName: "Szpilki",
       brand: "Test producent",
       pricePLN: 49,
-      priceUSD: 10,
+      priceEUR: 10,
       photos: [
         "http://localhost:3000/product-photos/women-shoes-1.jpg",
         "http://localhost:3000/product-photos/women-shoes-2.jpg",
@@ -31,7 +32,7 @@ export const Bestsellers = () => {
       productName: "Szpilki 2",
       brand: "Inny proucent",
       pricePLN: 149,
-      priceUSD: 39,
+      priceEUR: 39,
       photos: [
         "http://localhost:3000/product-photos/women-shoes-2.jpg",
         "http://localhost:3000/product-photos/women-shoes-3.jpg",
@@ -50,7 +51,7 @@ export const Bestsellers = () => {
       productName: "Biały Sweter",
       brand: "Sun zi",
       pricePLN: 299,
-      priceUSD: 59,
+      priceEUR: 59,
       photos: [
         "http://localhost:3000/product-photos/women-sweater-1.jpg",
         "http://localhost:3000/product-photos/women-trousers-2.jpg",
@@ -69,7 +70,7 @@ export const Bestsellers = () => {
       productName: "Spodnie",
       brand: "Shin-tzu",
       pricePLN: 149,
-      priceUSD: 39,
+      priceEUR: 39,
       photos: [
         "http://localhost:3000/product-photos/women-trousers-1.jpg",
         "http://localhost:3000/product-photos/women-trousers-2.jpg",
@@ -84,10 +85,23 @@ export const Bestsellers = () => {
 
   return (
     <>
-      <CenteredContent>
-        <h2>Sprawdź nasze bestellery</h2>
-        <Product />
-      </CenteredContent>
+      <div className={css.bestsellers}>
+        <CenteredContent>
+          <h2 className={css.bestsellersTitle}>Sprawdź nasze bestellery</h2>
+          <div className={css.bestsellersList}>
+            {bestsellersMockup.map((product) => {
+              return (
+                <Product
+                  name={product.productName}
+                  price={product.pricePLN}
+                  photo={product.photos[0]}
+                  key={nanoid()}
+                />
+              );
+            })}
+          </div>
+        </CenteredContent>
+      </div>
     </>
   );
 };
