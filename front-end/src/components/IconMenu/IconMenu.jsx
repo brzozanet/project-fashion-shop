@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import ICON_HEART from "../../assets/iconHeart.svg";
-import ICON_BAG from "../../assets/iconBag.svg";
+import ICON_HEART from "../../assets/icon_heart.svg";
+import ICON_BAG from "../../assets/icon_cart.svg";
 import css from "./IconMenu.module.css";
 
 export const IconMenu = () => {

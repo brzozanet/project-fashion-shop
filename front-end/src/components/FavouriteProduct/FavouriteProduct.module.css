@@ -26,3 +26,7 @@
   font-size: var(--font-size-default);
   margin-bottom: 0.5rem;
 }
+
+.favouritePrice {
+  font-weight: 700;
+}

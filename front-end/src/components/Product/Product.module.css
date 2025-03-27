@@ -28,10 +28,10 @@
   left: 0.5rem;
   width: 1.5rem;
   height: 1.5rem;
-  background-image: url("../../assets/iconHeart.svg");
+  background-image: url("../../assets/icon_heart.svg");
   background-repeat: no-repeat;
 }
 
 .heartIcon:hover {
-  background-image: url("../../assets/iconHeartRed.svg");
+  background-image: url("../../assets/icon_heart_red.svg");
 }

@@ -1,6 +1,12 @@
 import css from "./FavouriteProduct.module.css";
 
-export const FavouriteProduct = ({ image, name, description, price }) => {
+export const FavouriteProduct = ({
+  image,
+  brand,
+  name,
+  description,
+  price,
+}) => {
   const truncateTextSmart = (text, maxLength) => {
     if (text.length <= maxLength) return text;
 
@@ -26,11 +32,13 @@ export const FavouriteProduct = ({ image, name, description, price }) => {
           </div>
         </div>
         <div className={css.favouriteBox}>
-          <h3 className={css.favouriteTitle}>{name}</h3>
+          <h3 className={css.favouriteTitle}>
+            {brand} {name}
+          </h3>
           <p>{truncateTextSmart(description, 100)}</p>
         </div>
         <div className={css.favouriteBox}>
-          <p>{price} zł</p>
+          <p className={css.favouritePrice}>{price} zł</p>
         </div>
       </div>
     </>

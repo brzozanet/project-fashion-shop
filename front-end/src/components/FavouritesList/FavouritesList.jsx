@@ -88,6 +88,7 @@ export const FavouritesList = () => {
           return (
             <FavouriteProduct
               image={product.photos[0]}
+              brand={product.brand}
               name={product.name}
               description={product.description}
               price={product.pricePLN}

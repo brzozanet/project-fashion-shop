@@ -1,5 +1,5 @@
 import { CenteredContent } from "../CenteredContent/CenteredContent";
-import IMAGE_HERO from "../../assets/heroSummersaleFull.jpg";
+import IMAGE_HERO from "../../assets/hero_summersale.jpg";
 import css from "./Hero.module.css";
 import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
 
