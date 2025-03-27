@@ -82,7 +82,7 @@ export const CartSummary = () => {
     },
   ];
 
-  const productValue = cartProductsMockup.reduce(
+  const productValue = cartProductsMockup.reducer(
     (sum, product) => sum + product.pricePLN,
     0
   );
