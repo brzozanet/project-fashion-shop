@@ -10,6 +10,15 @@
   flex: 1;
 }
 
+.favouriteSubBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.favouriteSubBoxText {
+  flex: 1;
+}
+
 .favouritePhotoContainer {
   width: 85px;
   height: 140px;
@@ -29,4 +38,13 @@
 
 .favouritePrice {
   font-weight: 700;
+}
+
+.favouriteIcon {
+  margin-right: 1rem;
+}
+
+.favouriteIconText {
+  margin-left: 0.2rem;
+  font-size: 0.8rem;
 }
