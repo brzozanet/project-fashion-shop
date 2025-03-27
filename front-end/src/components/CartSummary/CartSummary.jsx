@@ -49,7 +49,7 @@ export const CartSummary = () => {
       subcategory: "koszulki",
       name: "Biały Sweter",
       brand: "Sun zi",
-      pricePLN: 299,
+      pricePLN: 99,
       priceEUR: 59,
       photos: [
         "http://localhost:3000/product-photos/women-sweater-1.jpg",
@@ -87,7 +87,12 @@ export const CartSummary = () => {
     0
   );
 
-  const shippingCost = 19;
+  let shippingCost;
+  if (productValue > 500) {
+    shippingCost = 0;
+  } else {
+    shippingCost = 29;
+  }
 
   const toBePaid = productValue + shippingCost;
 
