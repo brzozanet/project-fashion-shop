@@ -38,7 +38,7 @@ export const FavouriteProduct = ({
           <div className={css.favouriteSubBox}>
             <div className={css.favouriteSubBoxText}>
               <h3 className={css.favouriteTitle}>
-                {brand} {name}
+                {brand} | {name}
               </h3>
               <p>{truncateTextSmart(description, 100)}</p>
             </div>
