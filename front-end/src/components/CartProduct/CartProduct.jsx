@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import ICON_DELETE from "../../assets/icon_delete.svg";
 import css from "./CartProduct.module.css";
 
 export const CartProduct = ({ brand, name, image, description, price }) => {
@@ -26,10 +28,18 @@ export const CartProduct = ({ brand, name, image, description, price }) => {
           </div>
         </div>
         <div className={css.cartProductBox}>
-          <h3 className={css.cartProductTitle}>
-            {brand} | {name}
-          </h3>
-          <p>{truncateTextSmart(description, 100)}</p>
+          <div className={css.cartProductSubBox}>
+            <div className={css.cartProductSubBoxText}>
+              <h3 className={css.cartProductTitle}>
+                {brand} | {name}
+              </h3>
+              <p>{truncateTextSmart(description, 100)}</p>
+            </div>
+            <Link to="">
+              <img src={ICON_DELETE} width="14" height="14" />
+              <span className={css.cartProductIconText}>Usuń z koszyka</span>
+            </Link>
+          </div>
         </div>
         <div className={css.cartProductBox}>
           <p className={css.cartProductPrice}>{price} zł</p>

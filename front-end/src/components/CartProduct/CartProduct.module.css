@@ -10,6 +10,16 @@
   flex: 1;
 }
 
+.cartProductSubBox {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cartProductSubBoxText {
+  flex: 1;
+}
+
 .cartProductPhoto {
   width: 85px;
   height: 140px;
@@ -28,4 +38,9 @@
 
 .cartProductPrice {
   font-weight: 700;
+}
+
+.cartProductIconText {
+  margin-left: 0.2rem;
+  font-size: 0.8rem;
 }

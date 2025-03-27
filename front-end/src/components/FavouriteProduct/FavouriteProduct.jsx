@@ -45,7 +45,7 @@ export const FavouriteProduct = ({
             <div>
               <Link to="" className={css.favouriteIcon}>
                 <img src={ICON_DELETE} width="14" height="14" />
-                <span className={css.favouriteIconText}>Usuń</span>
+                <span className={css.favouriteIconText}>Usuń z ulubionych</span>
               </Link>
               <Link to="" className={css.favouriteIcon}>
                 <img src={ICON_CART} width="14" height="14" />
