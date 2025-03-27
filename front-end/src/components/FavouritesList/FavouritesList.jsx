@@ -48,7 +48,7 @@ export const FavouritesList = () => {
       subcategory: "koszulki",
       name: "Biały Sweter",
       brand: "Sun zi",
-      pricePLN: 299,
+      pricePLN: 99,
       priceEUR: 59,
       photos: [
         "http://localhost:3000/product-photos/women-sweater-1.jpg",
