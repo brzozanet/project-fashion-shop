@@ -43,11 +43,11 @@ export const FavouriteProduct = ({
               <p>{truncateTextSmart(description, 100)}</p>
             </div>
             <div>
-              <Link className={css.favouriteIcon}>
+              <Link to="" className={css.favouriteIcon}>
                 <img src={ICON_DELETE} width="14" height="14" />
                 <span className={css.favouriteIconText}>Usuń</span>
               </Link>
-              <Link className={css.favouriteIcon}>
+              <Link to="" className={css.favouriteIcon}>
                 <img src={ICON_CART} width="14" height="14" />
                 <span className={css.favouriteIconText}>Dodaj do koszyka</span>
               </Link>
