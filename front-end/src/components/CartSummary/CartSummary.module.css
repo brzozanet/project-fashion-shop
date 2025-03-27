@@ -1,6 +1,7 @@
 .cartSummary,
 .freeShipping {
   background-color: var(--color-grey);
+  width: 27rem;
   height: fit-content;
   padding: 1.5rem;
   margin-bottom: 1.5rem;

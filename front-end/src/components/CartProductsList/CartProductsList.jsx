@@ -1,4 +1,5 @@
 import { CartProduct } from "../CartProduct/CartProduct";
+import css from "./CartProductsList.module.css";
 
 export const CartProductsList = () => {
   const cartProductsMockup = [
@@ -82,7 +83,7 @@ export const CartProductsList = () => {
 
   return (
     <>
-      <div>
+      <div className={css.cartProductsList}>
         {cartProductsMockup.map((product) => {
           return (
             <CartProduct
