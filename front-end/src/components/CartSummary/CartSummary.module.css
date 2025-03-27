@@ -1,4 +1,31 @@
-.cartSummary {
+.cartSummary,
+.freeShipping {
   background-color: var(--color-grey);
-  height: 300px;
+  height: fit-content;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cartSummaryTitle {
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--color-theme-main);
+  margin-bottom: 1rem;
+}
+
+.cartSummaryRow {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.cartSummaryRow > *:first-child {
+  flex: 1;
+}
+
+.freeShipping {
+  display: flex;
+}
+
+.freeShipping > *:last-child {
+  text-align: right;
+  flex: 1;
 }

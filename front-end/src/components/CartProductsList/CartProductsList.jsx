@@ -1,5 +1,3 @@
-// import css from "./CartProductsList.module.css";
-
 import { CartProduct } from "../CartProduct/CartProduct";
 
 export const CartProductsList = () => {
