@@ -1,0 +1,18 @@
+.expandableMenu {
+  width: 12rem;
+  margin-top: 1rem;
+}
+
+.genderTitle {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.categoriesItem {
+  padding-bottom: 0.5rem;
+}
+
+.categoriesLink {
+  display: flex;
+  justify-content: space-between;
+}
