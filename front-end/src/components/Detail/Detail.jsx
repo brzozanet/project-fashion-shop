@@ -1,3 +1,4 @@
+import { Accordion } from "../Accordion/Accordion";
 import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
 import css from "./Detail.module.css";
 
@@ -13,6 +14,7 @@ export const Detail = ({ brand, name, price }) => {
         </div>
         <p className={css.detailShipping}>Dostawa do 24h</p>
         <p className={css.detailReturn}>Zwrot do 30 dni</p>
+        <Accordion />
       </div>
     </>
   );

@@ -6,7 +6,6 @@ import { Breadcrumbs } from "../../components/Breadcrumbs/Breadcrumbs";
 import { Photos } from "../../components/Photos/Photos";
 import { Detail } from "../../components/Detail/Detail";
 import css from "./ProductDetails.module.css";
-import { Accordion } from "../../components/Accordion/Accordion";
 
 export const ProductDetails = () => {
   const productDetailsMockup = {
@@ -42,14 +41,11 @@ export const ProductDetails = () => {
                   photos={productDetailsMockup.photos}
                   name={productDetailsMockup.name}
                 />
-                <div>
-                  <Detail
-                    brand={productDetailsMockup.brand}
-                    name={productDetailsMockup.name}
-                    price={productDetailsMockup.pricePLN}
-                  />
-                  <Accordion />
-                </div>
+                <Detail
+                  brand={productDetailsMockup.brand}
+                  name={productDetailsMockup.name}
+                  price={productDetailsMockup.pricePLN}
+                />
               </div>
             </div>
           </FlexContainer>
