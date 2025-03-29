@@ -14,7 +14,6 @@ export const Photos = ({ photos, name }) => {
             return (
               <li key={nanoid()}>
                 <Link
-                  to=""
                   onClick={() => setSelectedPhoto(index)}
                   className={css.photoThumbnailLink}
                 >

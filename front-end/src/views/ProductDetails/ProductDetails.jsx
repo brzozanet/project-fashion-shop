@@ -16,9 +16,9 @@ export const ProductDetails = () => {
     pricePLN: 99,
     priceEUR: 59,
     photos: [
+      "http://localhost:3000/product-photos/women-shoes-1.jpg",
       "http://localhost:3000/product-photos/women-sweater-1.jpg",
       "http://localhost:3000/product-photos/women-trousers-1.jpg",
-      "http://localhost:3000/product-photos/women-shoes-1.jpg",
     ],
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
