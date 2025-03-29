@@ -1,7 +1,23 @@
-.breadcrumbs {
+.breadcrumbsList {
   margin-top: 1rem;
   width: 100%;
-  font-weight: 700;
-  text-transform: uppercase;
+  display: flex;
   margin-bottom: 2rem;
+}
+
+.breadcrumbsLink {
+  text-transform: uppercase;
+}
+
+.breadcrumbsImage {
+  padding: 0 0.5rem;
+  transform: rotate(-90deg);
+}
+
+.breadcrumbsItem:last-child .breadcrumbsImage {
+  display: none;
+}
+
+.breadcrumbsLink a:global(.active) {
+  font-weight: 700;
 }
