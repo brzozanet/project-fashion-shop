@@ -21,6 +21,7 @@ export const Accordion = ({ description, maintenanceInfo }) => {
           <p className={css.accordionTitle}>Opis produktu</p>
           <img
             src={ICON_ARROW}
+            alt="arrow"
             className={
               descriptionVisilbe ? css.accordionImg : css.accordionImgReverse
             }
@@ -36,6 +37,7 @@ export const Accordion = ({ description, maintenanceInfo }) => {
           <p className={css.accordionTitle}>Wskazówki pielęgnacyjne</p>
           <img
             src={ICON_ARROW}
+            alt="arrow"
             className={
               descriptionVisilbe ? css.accordionImg : css.accordionImgReverse
             }
