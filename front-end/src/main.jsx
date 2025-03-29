@@ -4,6 +4,7 @@ import { MainPage } from "./views/MainPage/MainPage";
 import { Favourites } from "./views/Favourites/Favourites";
 import { Cart } from "./views/Cart/Cart";
 import { ProductsList } from "./views/ProductsList/ProductsList";
+import { ProductDetails } from "./views/ProductDetails/ProductDetails";
 import "./styles/globals.css";
 import "./styles/theme.css";
 
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     element: <ProductsList />,
     path: "produkty",
+  },
+  {
+    element: <ProductDetails />,
+    path: "produkt",
   },
 ]);
 
