@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { nanoid } from "nanoid";
-import css from "./Photos.module.css";
 import { useState } from "react";
+import css from "./Photos.module.css";
 
 export const Photos = ({ photos, name }) => {
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
@@ -33,7 +33,11 @@ export const Photos = ({ photos, name }) => {
           })}
         </div>
         <div className={css.photoBigContainer}>
-          <img src={photos[selectedPhotoIndex]} className={css.photoBigImg} />
+          <img
+            src={photos[selectedPhotoIndex]}
+            className={css.photoBigImg}
+            alt={name}
+          />
         </div>
       </div>
     </>
