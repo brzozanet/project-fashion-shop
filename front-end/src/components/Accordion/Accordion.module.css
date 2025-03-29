@@ -1,8 +1,6 @@
 .accordionContainer {
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
-  min-width: 100px;
 }
 
 .accordionImg {

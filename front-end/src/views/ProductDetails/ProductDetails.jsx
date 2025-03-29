@@ -34,7 +34,7 @@ export const ProductDetails = () => {
         <CenteredContent>
           <FlexContainer>
             <ExpandableMenu />
-            <div>
+            <div className={css.productDetailsWithBreadcrumbs}>
               <Breadcrumbs />
               <div className={css.productDetailContainer}>
                 <Photos
