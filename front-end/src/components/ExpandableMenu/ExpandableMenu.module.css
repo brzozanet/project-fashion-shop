@@ -17,3 +17,16 @@
   display: flex;
   justify-content: space-between;
 }
+
+.categoriesIconActive {
+  transform: rotate(180deg);
+}
+
+.subCategoriesItem {
+  padding-top: 0.5rem;
+  padding-left: 2rem;
+}
+
+.subCategoriesLink a:global(.active) {
+  font-weight: 700;
+}

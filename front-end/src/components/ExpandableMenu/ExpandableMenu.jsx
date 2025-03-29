@@ -6,7 +6,7 @@ import css from "./ExpandableMenu.module.css";
 
 export const ExpandableMenu = () => {
   const activeGenderName = "Kobieta";
-  // const activeCategoryPath = "odziez";
+  const activeCategoryPath = "odziez";
 
   return (
     <>
@@ -18,8 +18,34 @@ export const ExpandableMenu = () => {
               return (
                 <li key={nanoid()} className={css.categoriesItem}>
                   <NavLink to={category.path} className={css.categoriesLink}>
-                    {category.name} <img src={ICON_ARROW} />
+                    {category.name}{" "}
+                    <img
+                      src={ICON_ARROW}
+                      className={
+                        activeCategoryPath === category.path
+                          ? css.categoriesIconActive
+                          : ""
+                      }
+                    />
                   </NavLink>
+                  {activeCategoryPath === category.path ? (
+                    <ul>
+                      {category.subcategories.map((subcategory) => {
+                        return (
+                          <li key={nanoid()} className={css.subCategoriesItem}>
+                            <NavLink
+                              to={`${category.path}/${subcategory.path}`}
+                              className={css.subCategoriesLink}
+                            >
+                              {subcategory.name}
+                            </NavLink>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  ) : (
+                    ""
+                  )}
                 </li>
               );
             })}
