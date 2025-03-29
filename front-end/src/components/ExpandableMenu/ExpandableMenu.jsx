@@ -5,30 +5,30 @@ import ICON_ARROW from "../../assets/icon_arrow.svg";
 import css from "./ExpandableMenu.module.css";
 
 export const ExpandableMenu = () => {
-  const activeGenderName = "Kobieta";
-  const activeCategoryPath = "odziez";
+  const activeGenderNameMockup = "Kobieta";
+  const activeCategoryPathMockup = "odziez";
 
   return (
     <>
       <div className={css.expandableMenu}>
-        <p className={css.genderTitle}>{activeGenderName}</p>
+        <p className={css.genderTitle}>{activeGenderNameMockup}</p>
         <div>
           <ul>
             {CATEGORIES.map((category) => {
               return (
                 <li key={nanoid()} className={css.categoriesItem}>
                   <NavLink to={category.path} className={css.categoriesLink}>
-                    {category.name}{" "}
+                    {category.name}
                     <img
                       src={ICON_ARROW}
                       className={
-                        activeCategoryPath === category.path
+                        activeCategoryPathMockup === category.path
                           ? css.categoriesIconActive
                           : ""
                       }
                     />
                   </NavLink>
-                  {activeCategoryPath === category.path ? (
+                  {activeCategoryPathMockup === category.path ? (
                     <ul>
                       {category.subcategories.map((subcategory) => {
                         return (

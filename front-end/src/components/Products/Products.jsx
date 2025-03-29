@@ -3,6 +3,7 @@ import { Product } from "../Product/Product";
 import css from "./Products.module.css";
 
 export const Products = () => {
+  const activeProductsCategoryMockup = "Swetry";
   const productsMockup = [
     {
       id: 1,
@@ -1354,7 +1355,7 @@ export const Products = () => {
 
   return (
     <>
-      <h2 className={css.productsTitle}>Swetry</h2>
+      <h2 className={css.productsTitle}>{activeProductsCategoryMockup}</h2>
       <div className={css.products}>
         {productsMockup.map((product) => {
           return (
