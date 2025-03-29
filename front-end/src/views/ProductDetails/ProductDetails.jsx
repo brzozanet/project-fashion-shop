@@ -45,6 +45,8 @@ export const ProductDetails = () => {
                   brand={productDetailsMockup.brand}
                   name={productDetailsMockup.name}
                   price={productDetailsMockup.pricePLN}
+                  description={productDetailsMockup.description}
+                  maintenanceInfo={productDetailsMockup.maintenanceInfo}
                 />
               </div>
             </div>
