@@ -18,6 +18,10 @@
   /* object-fit: contain; zachowuje proporcje, może zostawić puste miejsca */
 }
 
+.photoThumbnailImgActive {
+  border: 2px solid var(--color-text-default);
+}
+
 .photoBigContainer {
   width: 500px;
   height: 700px;

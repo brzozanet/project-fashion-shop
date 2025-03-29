@@ -4,7 +4,7 @@ import css from "./Photos.module.css";
 import { useState } from "react";
 
 export const Photos = ({ photos, name }) => {
-  const [selectedPhoto, setSelectedPhoto] = useState(0);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
 
   return (
     <>
@@ -14,14 +14,18 @@ export const Photos = ({ photos, name }) => {
             return (
               <li key={nanoid()}>
                 <Link
-                  onClick={() => setSelectedPhoto(index)}
+                  onClick={() => setSelectedPhotoIndex(index)}
                   className={css.photoThumbnailLink}
                 >
                   <img
                     src={photo}
                     alt={name}
                     title={name}
-                    className={css.photoThumbnailImg}
+                    className={
+                      selectedPhotoIndex === index
+                        ? `${css.photoThumbnailImg} ${css.photoThumbnailImgActive}`
+                        : css.photoThumbnailImg
+                    }
                   />
                 </Link>
               </li>
@@ -29,7 +33,7 @@ export const Photos = ({ photos, name }) => {
           })}
         </div>
         <div className={css.photoBigContainer}>
-          <img src={photos[selectedPhoto]} className={css.photoBigImg} />
+          <img src={photos[selectedPhotoIndex]} className={css.photoBigImg} />
         </div>
       </div>
     </>
