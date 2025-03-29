@@ -4,6 +4,8 @@ import { FlexContainer } from "../../components/FlexContainer/FlexContainer";
 import { ExpandableMenu } from "../../components/ExpandableMenu/ExpandableMenu";
 import { Breadcrumbs } from "../../components/Breadcrumbs/Breadcrumbs";
 import { Photos } from "../../components/Photos/Photos";
+import { Detail } from "../../components/Detail/Detail";
+import css from "./ProductDetails.module.css";
 
 export const ProductDetails = () => {
   const productDetailsMockup = {
@@ -34,10 +36,16 @@ export const ProductDetails = () => {
             <ExpandableMenu />
             <div>
               <Breadcrumbs />
-              <Photos
-                photos={productDetailsMockup.photos}
-                name={productDetailsMockup.name}
-              />
+              <div className={css.productDetailContainer}>
+                <Photos
+                  photos={productDetailsMockup.photos}
+                  name={productDetailsMockup.name}
+                />
+                <Detail
+                  brand={productDetailsMockup.brand}
+                  name={productDetailsMockup.name}
+                />
+              </div>
             </div>
           </FlexContainer>
         </CenteredContent>
