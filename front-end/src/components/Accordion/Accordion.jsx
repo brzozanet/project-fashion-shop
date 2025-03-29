@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { nanoid } from "nanoid";
 import ICON_ARROW from "../../assets/icon_arrow.svg";
 import css from "./Accordion.module.css";
-import { nanoid } from "nanoid";
 
 export const Accordion = ({ description, maintenanceInfo }) => {
   // NOTE: toggle visibility
