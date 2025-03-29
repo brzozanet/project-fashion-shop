@@ -7,6 +7,10 @@
   transform: rotate(180deg);
 }
 
+.accordionImgReverse {
+  transform: none;
+}
+
 .accordionTitle {
   font-weight: 700;
   padding: 1rem 0;
