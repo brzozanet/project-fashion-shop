@@ -4,7 +4,7 @@ import css from "./Detail.module.css";
 export const Detail = ({ brand, name, price }) => {
   return (
     <>
-      <div className={css.detail}>
+      <div>
         <h3 className={css.detailBrand}>{brand}</h3>
         <p className={css.detailName}>{name}</p>
         <p className={css.detailPrice}>{price} zł</p>
