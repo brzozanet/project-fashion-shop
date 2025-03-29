@@ -1,3 +1,8 @@
+.productsTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;

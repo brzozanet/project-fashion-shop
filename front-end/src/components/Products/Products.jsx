@@ -1354,6 +1354,7 @@ export const Products = () => {
 
   return (
     <>
+      <h2 className={css.productsTitle}>Swetry</h2>
       <div className={css.products}>
         {productsMockup.map((product) => {
           return (
