@@ -28,7 +28,6 @@ export const Accordion = ({ description, maintenanceInfo }) => {
         {descriptionVisilbe && (
           <p className={css.accordionText}>{description}</p>
         )}
-
         <div className={css.accordionContainer}>
           <Link onClick={() => setMaintenanceInfoVisilbe(toggleState)}>
             <p className={css.accordionTitle}>Wskazówki pielęgnacyjne</p>

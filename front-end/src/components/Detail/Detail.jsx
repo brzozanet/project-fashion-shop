@@ -11,7 +11,7 @@ export const Detail = ({
 }) => {
   return (
     <>
-      <div>
+      <div className={css.detail}>
         <h3 className={css.detailBrand}>{brand}</h3>
         <p className={css.detailName}>{name}</p>
         <p className={css.detailPrice}>{price} zł</p>
