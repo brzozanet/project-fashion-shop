@@ -13,7 +13,7 @@ export const ProductDetails = () => {
     gender: "men",
     category: "odziez",
     subcategory: "koszulki",
-    productName: "T-Shirt",
+    name: "T-Shirt",
     brand: "Top Brand",
     pricePLN: 49,
     priceUSD: 10,
@@ -25,7 +25,7 @@ export const ProductDetails = () => {
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
     maintenanceInfo:
-      "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu. Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu",
+      "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu. Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu.",
   };
 
   return (
