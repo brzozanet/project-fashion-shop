@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import { CartProduct } from "../CartProduct/CartProduct";
 import css from "./CartProductsList.module.css";
 
@@ -92,6 +93,7 @@ export const CartProductsList = () => {
               image={product.photos[0]}
               description={product.description}
               price={product.pricePLN}
+              key={nanoid()}
             />
           );
         })}

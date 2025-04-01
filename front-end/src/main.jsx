@@ -1,34 +1,35 @@
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { MainPage } from "./views/MainPage/MainPage";
 import { Favourites } from "./views/Favourites/Favourites";
 import { Cart } from "./views/Cart/Cart";
-import { ProductsList } from "./views/ProductsList/ProductsList";
-import { ProductDetails } from "./views/ProductDetails/ProductDetails";
+import { Layout } from "./components/Layout/Layout";
 import "./styles/globals.css";
 import "./styles/theme.css";
 
 const router = createBrowserRouter([
   {
-    element: <MainPage />,
-    path: "/",
+    element: <Layout />,
+    path: "",
+    children: [
+      {
+        element: <Favourites />,
+        path: "/ulubione",
+      },
+      {
+        element: <Cart />,
+        path: "/koszyk",
+      },
+    ],
   },
-  {
-    element: <Favourites />,
-    path: "/ulubione",
-  },
-  {
-    element: <Cart />,
-    path: "/koszyk",
-  },
-  {
-    element: <ProductsList />,
-    path: "produkty",
-  },
-  {
-    element: <ProductDetails />,
-    path: "produkt",
-  },
+
+  // {
+  //   element: <ProductsList />,
+  //   path: "produkty",
+  // },
+  // {
+  //   element: <ProductDetails />,
+  //   path: "produkt",
+  // },
 ]);
 
 createRoot(document.getElementById("root")).render(
