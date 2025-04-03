@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Favourites } from "./views/Favourites/Favourites";
 import { Cart } from "./views/Cart/Cart";
 import { Layout } from "./components/Layout/Layout";
+import { MainPage } from "./views/MainPage/MainPage";
 import "./styles/globals.css";
 import "./styles/theme.css";
 
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
     element: <Layout />,
     path: "",
     children: [
+      {
+        element: <MainPage />,
+        path: "/:gender",
+      },
       {
         element: <Favourites />,
         path: "/ulubione",

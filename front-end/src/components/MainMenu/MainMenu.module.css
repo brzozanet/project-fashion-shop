@@ -15,6 +15,6 @@
 }
 
 .mainMenuItem a:global(.active) {
-  border-bottom: 3px solid var(--color-text-default);
+  border-bottom: 2px solid var(--color-text-default);
   color: var(--color-text-default);
 }
