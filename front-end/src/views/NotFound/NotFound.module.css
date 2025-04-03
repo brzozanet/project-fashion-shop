@@ -1,3 +1,7 @@
 .notFound {
-  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
 }

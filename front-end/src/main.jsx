@@ -8,6 +8,8 @@ import { Favourites } from "./views/Favourites/Favourites";
 import { Cart } from "./views/Cart/Cart";
 import { Layout } from "./components/Layout/Layout";
 import { MainPage } from "./views/MainPage/MainPage";
+import { NotFound } from "./views/NotFound/NotFound";
+import { GENDERS_MAPPING } from "./api/mappings";
 import "./styles/globals.css";
 import "./styles/theme.css";
 
@@ -20,22 +22,13 @@ const router = createBrowserRouter([
         element: <MainPage />,
         path: "/:gender",
         loader: ({ params }) => {
-          const GENDERS_MAPPING = new Map([
-            ["kobieta", "women"],
-            ["mezczyzna", "men"],
-            ["dziecko", "children"],
-          ]);
-
-          console.log(params.gender);
-          console.log(GENDERS_MAPPING.get(params.gender));
-
           if (GENDERS_MAPPING.get(params.gender)) {
             return fetch(
               `http://localhost:3000/${GENDERS_MAPPING.get(params.gender)}`
             );
           }
 
-          return redirect("/koszyk");
+          return redirect("/404");
         },
       },
       {
@@ -45,6 +38,10 @@ const router = createBrowserRouter([
       {
         element: <Cart />,
         path: "/koszyk",
+      },
+      {
+        element: <NotFound />,
+        path: "/404",
       },
     ],
   },
