@@ -1,5 +1,9 @@
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  redirect,
+  RouterProvider,
+} from "react-router-dom";
 import { Favourites } from "./views/Favourites/Favourites";
 import { Cart } from "./views/Cart/Cart";
 import { Layout } from "./components/Layout/Layout";
@@ -15,6 +19,24 @@ const router = createBrowserRouter([
       {
         element: <MainPage />,
         path: "/:gender",
+        loader: ({ params }) => {
+          const GENDERS_MAPPING = new Map([
+            ["kobieta", "women"],
+            ["mezczyzna", "men"],
+            ["dziecko", "children"],
+          ]);
+
+          console.log(params.gender);
+          console.log(GENDERS_MAPPING.get(params.gender));
+
+          if (GENDERS_MAPPING.get(params.gender)) {
+            return fetch(
+              `http://localhost:3000/${GENDERS_MAPPING.get(params.gender)}`
+            );
+          }
+
+          return redirect("/koszyk");
+        },
       },
       {
         element: <Favourites />,
