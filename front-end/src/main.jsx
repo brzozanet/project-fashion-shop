@@ -13,10 +13,12 @@ const router = createBrowserRouter([
   {
     element: <Layout />,
     path: "",
+
     children: [
       {
         element: <MainPage />,
         path: "/:gender?",
+        errorElement: <NotFound />,
         loader: loaderMainPage,
       },
       {
@@ -26,10 +28,6 @@ const router = createBrowserRouter([
       {
         element: <Cart />,
         path: "/koszyk",
-      },
-      {
-        element: <NotFound />,
-        path: "/404",
       },
     ],
   },
