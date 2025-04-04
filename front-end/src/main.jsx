@@ -4,6 +4,7 @@ import { Favourites } from "./views/Favourites/Favourites";
 import { Cart } from "./views/Cart/Cart";
 import { Layout } from "./components/Layout/Layout";
 import { MainPage } from "./views/MainPage/MainPage";
+import { ProductsList } from "./views/ProductsList/ProductsList";
 import { NotFound } from "./views/NotFound/NotFound";
 import { loaderMainPage } from "./api/loaderMainPage";
 import "./styles/globals.css";
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
         loader: loaderMainPage,
       },
       {
+        element: <ProductsList />,
+        path: "/produkty",
+      },
+      {
         element: <Favourites />,
         path: "/ulubione",
       },
@@ -32,10 +37,6 @@ const router = createBrowserRouter([
     ],
   },
 
-  // {
-  //   element: <ProductsList />,
-  //   path: "produkty",
-  // },
   // {
   //   element: <ProductDetails />,
   //   path: "produkt",
