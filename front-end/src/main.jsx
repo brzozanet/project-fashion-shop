@@ -23,10 +23,6 @@ const router = createBrowserRouter([
         loader: loaderMainPage,
       },
       {
-        element: <ProductsList />,
-        path: "/produkty",
-      },
-      {
         element: <Favourites />,
         path: "/ulubione",
       },
