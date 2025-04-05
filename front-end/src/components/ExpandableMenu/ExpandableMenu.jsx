@@ -6,12 +6,9 @@ import ICON_ARROW from "../../assets/icon_arrow.svg";
 import css from "./ExpandableMenu.module.css";
 
 export const ExpandableMenu = () => {
-  const activeCategoryPathMockup = "odziez";
-
   const params = useParams();
-  console.log(params);
   const activeGender = ACTIVE_GENDERS_MAPPING.get(params.gender);
-  console.log(activeGender);
+  const activeCategoryPathMockup = params.category;
 
   return (
     <>
