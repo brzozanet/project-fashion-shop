@@ -1,15 +1,27 @@
 import { nanoid } from "nanoid";
 import { Product } from "../Product/Product";
 import css from "./Products.module.css";
+import { useParams } from "react-router-dom";
 
 export const Products = ({ data }) => {
-  const activeProductsCategoryMockup = "Swetry";
+  const params = useParams();
 
-  console.log(data);
+  let activeProductsCategory;
+
+  if (params.subcategory) {
+    activeProductsCategory = params.subcategory;
+  } else if (params.category) {
+    activeProductsCategory = params.category;
+  } else {
+    activeProductsCategory = params.gender;
+  }
 
   return (
     <>
-      <h2 className={css.productsTitle}>{activeProductsCategoryMockup}</h2>
+      <h2 className={css.productsTitle}>
+        {activeProductsCategory.charAt(0).toUpperCase() +
+          activeProductsCategory.slice(1)}
+      </h2>
       <div className={css.products}>
         {data.map((product) => {
           return (

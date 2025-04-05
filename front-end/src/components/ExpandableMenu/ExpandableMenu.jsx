@@ -7,7 +7,6 @@ import css from "./ExpandableMenu.module.css";
 
 export const ExpandableMenu = () => {
   const params = useParams();
-  console.log(params);
   const activeGenderText = GENDERS_TEXT_MAPPING.get(params.gender);
   const activeCategory = params.category;
 

@@ -15,7 +15,5 @@ export const loaderProductList = ({ params }) => {
     searchParams.append("subcategory", params.subcategory);
   }
 
-  console.log(searchParams.toString());
-
   return fetch(`${BACKEND_URL}/products?${searchParams.toString()}`);
 };
