@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       {
         element: <MainPage />,
         path: "/:gender?",
-        errorElement: <NotFound />,
+        // errorElement: <NotFound />,
         loader: loaderMainPage,
       },
       {
