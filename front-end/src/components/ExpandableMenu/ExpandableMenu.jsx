@@ -1,17 +1,22 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { CATEGORIES } from "../../constans/categories";
+import { ACTIVE_GENDERS_MAPPING } from "../../constans/mappings";
 import { nanoid } from "nanoid";
 import ICON_ARROW from "../../assets/icon_arrow.svg";
 import css from "./ExpandableMenu.module.css";
 
 export const ExpandableMenu = () => {
-  const activeGenderNameMockup = "Kobieta";
   const activeCategoryPathMockup = "odziez";
+
+  const params = useParams();
+  console.log(params);
+  const activeGender = ACTIVE_GENDERS_MAPPING.get(params.gender);
+  console.log(activeGender);
 
   return (
     <>
       <div className={css.expandableMenu}>
-        <p className={css.genderTitle}>{activeGenderNameMockup}</p>
+        <p className={css.genderTitle}>{activeGender}</p>
         <div>
           <ul>
             {CATEGORIES.map((category) => {
