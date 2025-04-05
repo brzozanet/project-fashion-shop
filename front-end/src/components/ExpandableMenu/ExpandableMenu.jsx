@@ -8,7 +8,7 @@ import css from "./ExpandableMenu.module.css";
 export const ExpandableMenu = () => {
   const params = useParams();
   const activeGender = ACTIVE_GENDERS_MAPPING.get(params.gender);
-  const activeCategoryPathMockup = params.category;
+  const activeCategory = params.category;
 
   return (
     <>
@@ -24,13 +24,13 @@ export const ExpandableMenu = () => {
                     <img
                       src={ICON_ARROW}
                       className={
-                        activeCategoryPathMockup === category.path
+                        activeCategory === category.path
                           ? css.categoriesIconActive
                           : ""
                       }
                     />
                   </NavLink>
-                  {activeCategoryPathMockup === category.path ? (
+                  {activeCategory === category.path ? (
                     <ul>
                       {category.subcategories.map((subcategory) => {
                         return (
