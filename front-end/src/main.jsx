@@ -5,8 +5,8 @@ import { Cart } from "./views/Cart/Cart";
 import { Layout } from "./components/Layout/Layout";
 import { MainPage } from "./views/MainPage/MainPage";
 import { ProductsList } from "./views/ProductsList/ProductsList";
-import { NotFound } from "./views/NotFound/NotFound";
 import { loaderMainPage } from "./api/loaderMainPage";
+import { loaderProductList } from "./api/loaderProductsList";
 import "./styles/globals.css";
 import "./styles/theme.css";
 
@@ -14,14 +14,19 @@ const router = createBrowserRouter([
   {
     element: <Layout />,
     path: "",
-
+    // errorElement: <NotFound />,
     children: [
       {
         element: <MainPage />,
         path: "/:gender?",
-        errorElement: <NotFound />,
         loader: loaderMainPage,
       },
+      {
+        element: <ProductsList />,
+        path: ":gender/:category",
+        loader: loaderProductList,
+      },
+
       {
         element: <Favourites />,
         path: "/ulubione",
