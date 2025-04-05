@@ -5,7 +5,6 @@ import css from "./CategoriesMenu.module.css";
 
 export const CategoriesMenu = () => {
   const params = useParams();
-  console.log(params);
 
   return (
     <>
