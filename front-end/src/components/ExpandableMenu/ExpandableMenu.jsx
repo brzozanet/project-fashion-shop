@@ -7,6 +7,7 @@ import css from "./ExpandableMenu.module.css";
 
 export const ExpandableMenu = () => {
   const params = useParams();
+  console.log(params);
   const activeGenderText = GENDERS_TEXT_MAPPING.get(params.gender);
   const activeCategory = params.category;
 
@@ -39,7 +40,7 @@ export const ExpandableMenu = () => {
                         return (
                           <li key={nanoid()} className={css.subCategoriesItem}>
                             <NavLink
-                              to={`${category.path}/${subcategory.path}`}
+                              to={`/${params.gender}/${category.path}/${subcategory.path}`}
                               className={css.subCategoriesLink}
                             >
                               {subcategory.name}

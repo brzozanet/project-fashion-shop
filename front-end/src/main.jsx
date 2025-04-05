@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       },
       {
         element: <ProductsList />,
-        path: ":gender/:category",
+        path: ":gender/:category/:subcategory?",
         loader: loaderProductList,
       },
 
