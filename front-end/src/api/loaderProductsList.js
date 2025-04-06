@@ -25,9 +25,10 @@ export const loaderProductList = ({ params }) => {
     if (subcategoryExist) {
       if (params.subcategory) {
         searchParams.append("subcategory", params.subcategory);
+      } else {
+        // FIXME: not working
+        redirect(`/${gender}/${params.category}`);
       }
-
-      redirect(`/${gender}/${params.category}`);
     }
 
     return fetch(`${BACKEND_URL}/products?${searchParams.toString()}`);

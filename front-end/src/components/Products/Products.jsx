@@ -1,10 +1,19 @@
 import { nanoid } from "nanoid";
 import { Product } from "../Product/Product";
-import css from "./Products.module.css";
 import { useParams } from "react-router-dom";
+import { CATEGORIES } from "../../constans/categories";
+import css from "./Products.module.css";
 
 export const Products = ({ data }) => {
   const params = useParams();
+
+  // const categoryExist = CATEGORIES.find((category) => {
+  //   return category.path === params.category;
+  // });
+
+  // console.log(categoryExist);
+
+  // console.log(CATEGORIES.category);
 
   let activeProductsCategory;
 
