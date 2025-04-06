@@ -6,7 +6,7 @@ import { Layout } from "./components/Layout/Layout";
 import { MainPage } from "./views/MainPage/MainPage";
 import { ProductsList } from "./views/ProductsList/ProductsList";
 import { loaderMainPage } from "./api/loaderMainPage";
-import { loaderProductList } from "./api/loaderProductsList";
+import { loaderProductsList } from "./api/loaderProductsList";
 import "./styles/globals.css";
 import "./styles/theme.css";
 
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       {
         element: <ProductsList />,
         path: ":gender/:category/:subcategory?",
-        loader: loaderProductList,
+        loader: loaderProductsList,
       },
 
       {
