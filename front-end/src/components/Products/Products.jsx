@@ -18,10 +18,7 @@ export const Products = ({ data }) => {
 
   return (
     <>
-      <h2 className={css.productsTitle}>
-        {activeProductsCategory.charAt(0).toUpperCase() +
-          activeProductsCategory.slice(1)}
-      </h2>
+      <h2 className={css.productsTitle}>{activeProductsCategory}</h2>
       <div className={css.products}>
         {data.map((product) => {
           return (
