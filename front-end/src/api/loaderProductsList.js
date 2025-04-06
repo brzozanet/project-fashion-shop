@@ -18,17 +18,20 @@ export const loaderProductList = ({ params }) => {
       return subcategory.path === params.subcategory;
     });
 
-    if (params.category) {
+    if (categoryExist) {
       searchParams.append("category", params.category);
     }
 
     if (subcategoryExist) {
-      if (params.subcategory) {
-        searchParams.append("subcategory", params.subcategory);
-      } else {
-        // FIXME: not working
-        redirect(`/${gender}/${params.category}`);
+      searchParams.append("subcategory", params.subcategory);
+
+      // FIXME: not working
+      console.log(subcategoryExist.path);
+      console.log(params.subcategory);
+      if (subcategoryExist.path !== params.subcategory) {
+        return redirect(`/${gender}/${params.category}`);
       }
+      // FIXME: not working
     }
 
     return fetch(`${BACKEND_URL}/products?${searchParams.toString()}`);
