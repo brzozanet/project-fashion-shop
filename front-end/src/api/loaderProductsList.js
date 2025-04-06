@@ -5,8 +5,6 @@ import { CATEGORIES } from "../constans/categories";
 export const loaderProductList = ({ params }) => {
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
   const gender = GENDERS_MAPPING.get(params.gender);
-  console.log(params.gender);
-  console.log(params.category);
 
   const categoryExist = CATEGORIES.find((category) => {
     return category.path === params.category;
