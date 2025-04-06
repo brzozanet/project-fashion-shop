@@ -14,23 +14,21 @@ export const loaderProductList = ({ params }) => {
   searchParams.append("gender", gender);
 
   if (gender && categoryExist) {
-    const subcategoryExist = categoryExist.subcategories.find((subcategory) => {
-      return subcategory.path === params.subcategory;
-    });
+    if (params.subcategory) {
+      const subcategoryExist = categoryExist.subcategories.find(
+        (subcategory) => {
+          return subcategory.path === params.subcategory;
+        }
+      );
+
+      if (!subcategoryExist) {
+        return redirect(`/${params.gender}/${params.category}`);
+      }
+      searchParams.append("subcategory", params.subcategory);
+    }
 
     if (categoryExist) {
       searchParams.append("category", params.category);
-    }
-
-    if (subcategoryExist) {
-      searchParams.append("subcategory", params.subcategory);
-
-      // FIXME: not working
-      console.log(subcategoryExist.path);
-      console.log(params.subcategory);
-      if (subcategoryExist.path !== params.subcategory) {
-        return redirect(`/${params.gender}/${params.category}`);
-      }
     }
 
     return fetch(`${BACKEND_URL}/products?${searchParams.toString()}`);
