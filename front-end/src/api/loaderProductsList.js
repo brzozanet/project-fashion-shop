@@ -6,28 +6,28 @@ export const loaderProductList = ({ params }) => {
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
   const gender = GENDERS_MAPPING.get(params.gender);
 
-  const existingCategory = CATEGORIES.find((category) => {
+  const categoryExist = CATEGORIES.find((category) => {
     return category.path === params.category;
   });
-  console.log(existingCategory);
-
-  const existingSubcategory = existingCategory.subcategories.find(
-    (subcategory) => {
-      return subcategory.path === params.subcategory;
-    }
-  );
-  console.log(existingSubcategory);
 
   const searchParams = new URLSearchParams();
   searchParams.append("gender", gender);
 
-  if (gender && existingCategory) {
+  if (gender && categoryExist) {
+    const subcategoryExist = categoryExist.subcategories.find((subcategory) => {
+      return subcategory.path === params.subcategory;
+    });
+
     if (params.category) {
       searchParams.append("category", params.category);
     }
 
-    if (params.subcategory) {
-      searchParams.append("subcategory", params.subcategory);
+    if (subcategoryExist) {
+      if (params.subcategory) {
+        searchParams.append("subcategory", params.subcategory);
+      }
+
+      redirect(`/${gender}/${params.category}`);
     }
 
     return fetch(`${BACKEND_URL}/products?${searchParams.toString()}`);
