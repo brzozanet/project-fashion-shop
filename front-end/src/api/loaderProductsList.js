@@ -5,6 +5,7 @@ import { GENDERS_MAPPING } from "../constans/mappings";
 export const loaderProductsList = ({ params }) => {
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
   const gender = GENDERS_MAPPING.get(params.gender);
+
   const searchParams = new URLSearchParams();
 
   searchParams.append("gender", gender);
@@ -20,9 +21,8 @@ export const loaderProductsList = ({ params }) => {
       (subcategory) => subcategory.path === params.subcategory
     );
 
-    // FIXME: not working
     if (params.subcategory && !subcategoryExist) {
-      console.log("mam cie!");
+      return redirect(`/${params.gender}/${params.category}`);
     }
 
     if (subcategoryExist) {
@@ -31,5 +31,5 @@ export const loaderProductsList = ({ params }) => {
 
     return fetch(`${BACKEND_URL}/products?${searchParams.toString()}`);
   }
-  return redirect(`/${gender}`);
+  return redirect(`/${params.gender}`);
 };
