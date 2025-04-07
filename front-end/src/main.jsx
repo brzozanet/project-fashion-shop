@@ -7,6 +7,8 @@ import { MainPage } from "./views/MainPage/MainPage";
 import { ProductsList } from "./views/ProductsList/ProductsList";
 import { loaderMainPage } from "./api/loaderMainPage";
 import { loaderProductsList } from "./api/loaderProductsList";
+import { loaderProductDetails } from "./api/loaderProductDetails";
+import { ProductDetails } from "./views/ProductDetails/ProductDetails";
 import "./styles/globals.css";
 import "./styles/theme.css";
 
@@ -26,7 +28,11 @@ const router = createBrowserRouter([
         path: ":gender/:category/:subcategory?",
         loader: loaderProductsList,
       },
-
+      {
+        element: <ProductDetails />,
+        path: "/test",
+        loader: loaderProductDetails,
+      },
       {
         element: <Favourites />,
         path: "/ulubione",
@@ -37,11 +43,6 @@ const router = createBrowserRouter([
       },
     ],
   },
-
-  // {
-  //   element: <ProductDetails />,
-  //   path: "produkt",
-  // },
 ]);
 
 createRoot(document.getElementById("root")).render(

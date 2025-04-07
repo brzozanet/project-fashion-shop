@@ -1,4 +1,3 @@
-import { Layout } from "../../components/Layout/Layout";
 import { CenteredContent } from "../../components/CenteredContent/CenteredContent";
 import { FlexContainer } from "../../components/FlexContainer/FlexContainer";
 import { ExpandableMenu } from "../../components/ExpandableMenu/ExpandableMenu";
@@ -30,29 +29,27 @@ export const ProductDetails = () => {
 
   return (
     <>
-      <Layout>
-        <CenteredContent>
-          <FlexContainer>
-            <ExpandableMenu />
-            <div className={css.productDetailsWithBreadcrumbs}>
-              <Breadcrumbs />
-              <div className={css.productDetailContainer}>
-                <Photos
-                  photos={productDetailsMockup.photos}
-                  name={productDetailsMockup.name}
-                />
-                <Detail
-                  brand={productDetailsMockup.brand}
-                  name={productDetailsMockup.name}
-                  price={productDetailsMockup.pricePLN}
-                  description={productDetailsMockup.description}
-                  maintenanceInfo={productDetailsMockup.maintenanceInfo}
-                />
-              </div>
+      <CenteredContent>
+        <FlexContainer>
+          <ExpandableMenu />
+          <div className={css.productDetailsWithBreadcrumbs}>
+            <Breadcrumbs />
+            <div className={css.productDetailContainer}>
+              <Photos
+                photos={productDetailsMockup.photos}
+                name={productDetailsMockup.name}
+              />
+              <Detail
+                brand={productDetailsMockup.brand}
+                name={productDetailsMockup.name}
+                price={productDetailsMockup.pricePLN}
+                description={productDetailsMockup.description}
+                maintenanceInfo={productDetailsMockup.maintenanceInfo}
+              />
             </div>
-          </FlexContainer>
-        </CenteredContent>
-      </Layout>
+          </div>
+        </FlexContainer>
+      </CenteredContent>
     </>
   );
 };
