@@ -10,22 +10,22 @@ export const loaderProductsList = ({ params }) => {
 
   searchParams.append("gender", gender);
 
-  const categoryExist = CATEGORIES.find(
+  const foundCategory = CATEGORIES.find(
     (category) => category.path === params.category
   );
 
-  if (categoryExist) {
+  if (foundCategory) {
     searchParams.append("category", params.category);
 
-    const subcategoryExist = categoryExist.subcategories.find(
+    const foundSubcategory = foundCategory.subcategories.find(
       (subcategory) => subcategory.path === params.subcategory
     );
 
-    if (params.subcategory && !subcategoryExist) {
+    if (params.subcategory && !foundSubcategory) {
       return redirect(`/${params.gender}/${params.category}`);
     }
 
-    if (subcategoryExist) {
+    if (foundSubcategory) {
       searchParams.append("subcategory", params.subcategory);
     }
 
