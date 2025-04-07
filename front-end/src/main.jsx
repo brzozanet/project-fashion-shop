@@ -4,8 +4,9 @@ import { Favourites } from "./views/Favourites/Favourites";
 import { Cart } from "./views/Cart/Cart";
 import { Layout } from "./components/Layout/Layout";
 import { MainPage } from "./views/MainPage/MainPage";
-import { NotFound } from "./views/NotFound/NotFound";
+import { ProductsList } from "./views/ProductsList/ProductsList";
 import { loaderMainPage } from "./api/loaderMainPage";
+import { loaderProductsList } from "./api/loaderProductsList";
 import "./styles/globals.css";
 import "./styles/theme.css";
 
@@ -13,12 +14,19 @@ const router = createBrowserRouter([
   {
     element: <Layout />,
     path: "",
+    // errorElement: <NotFound />,
     children: [
       {
         element: <MainPage />,
         path: "/:gender?",
         loader: loaderMainPage,
       },
+      {
+        element: <ProductsList />,
+        path: ":gender/:category/:subcategory?",
+        loader: loaderProductsList,
+      },
+
       {
         element: <Favourites />,
         path: "/ulubione",
@@ -27,17 +35,9 @@ const router = createBrowserRouter([
         element: <Cart />,
         path: "/koszyk",
       },
-      {
-        element: <NotFound />,
-        path: "/404",
-      },
     ],
   },
 
-  // {
-  //   element: <ProductsList />,
-  //   path: "produkty",
-  // },
   // {
   //   element: <ProductDetails />,
   //   path: "produkt",

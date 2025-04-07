@@ -12,10 +12,11 @@
   gap: 1rem;
 }
 
-.categoryLink {
+.categoryItem a {
   color: var(--color-white);
 }
 
-.categoryLink a:global(.active) {
-  text-decoration: underline;
+.categoryItem a:global(.active) {
+  font-weight: 700;
+  border-bottom: 1px solid var(--color-white);
 }

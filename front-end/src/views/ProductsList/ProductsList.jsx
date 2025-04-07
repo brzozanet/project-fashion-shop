@@ -1,26 +1,26 @@
-import { Layout } from "../../components/Layout/Layout";
 import { FlexContainer } from "../../components/FlexContainer/FlexContainer";
 import { CenteredContent } from "../../components/CenteredContent/CenteredContent";
 import { ExpandableMenu } from "../../components/ExpandableMenu/ExpandableMenu";
 import { Breadcrumbs } from "../../components/Breadcrumbs/Breadcrumbs";
 import { Products } from "../../components/Products/Products";
 import { Pagination } from "../../components/Pagination/Pagination";
+import { useLoaderData } from "react-router-dom";
 
 export const ProductsList = () => {
+  const data = useLoaderData();
+
   return (
     <>
-      <Layout>
-        <CenteredContent>
-          <FlexContainer>
-            <ExpandableMenu />
-            <div>
-              <Breadcrumbs />
-              <Products />
-              <Pagination />
-            </div>
-          </FlexContainer>
-        </CenteredContent>
-      </Layout>
+      <CenteredContent>
+        <FlexContainer>
+          <ExpandableMenu />
+          <div>
+            <Breadcrumbs />
+            <Products data={data} />
+            <Pagination />
+          </div>
+        </FlexContainer>
+      </CenteredContent>
     </>
   );
 };

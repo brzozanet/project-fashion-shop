@@ -9,5 +9,5 @@ export const loaderMainPage = ({ params }) => {
     return fetch(`${BACKEND_URL}/${gender}`);
   }
 
-  return redirect("/404");
+  return redirect("/kobieta");
 };

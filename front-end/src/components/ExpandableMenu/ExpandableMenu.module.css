@@ -27,6 +27,6 @@
   padding-left: 2rem;
 }
 
-.subCategoriesLink a:global(.active) {
+.subCategoriesItem a:global(.active) {
   font-weight: 700;
 }
