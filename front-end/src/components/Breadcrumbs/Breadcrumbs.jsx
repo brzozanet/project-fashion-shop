@@ -2,6 +2,7 @@ import { NavLink, useParams } from "react-router-dom";
 import { nanoid } from "nanoid";
 import ICON_ARROW from "../../assets/icon_arrow.svg";
 import { GENDERS_TEXT_MAPPING } from "../../constans/mappings";
+import { CATEGORIES } from "../../constans/categories";
 
 import css from "./Breadcrumbs.module.css";
 
@@ -10,10 +11,28 @@ export const Breadcrumbs = () => {
 
   const activeGenderName = GENDERS_TEXT_MAPPING.get(params.gender);
 
+  const foundCategory = CATEGORIES.find(
+    (category) => params.category === category.path
+  );
+
   const breadcrumbs = [
     { name: `${activeGenderName}`, path: `/${params.gender}` },
-    { name: "Odzież", path: "odziez" },
+    {
+      name: `${foundCategory.name}`,
+      path: `/${params.gender}/${params.category}`,
+    },
   ];
+
+  if (params.subcategory) {
+    const foundSubcategory = foundCategory.subcategories.find(
+      (subcategory) => params.subcategory === subcategory.path
+    );
+
+    breadcrumbs.push({
+      name: `${foundSubcategory.name}`,
+      path: `/${params.gender}/${params.category}/${params.subcategory}`,
+    });
+  }
 
   return (
     <>
@@ -21,7 +40,7 @@ export const Breadcrumbs = () => {
         {breadcrumbs.map((breadcrumb) => {
           return (
             <li key={nanoid()} className={css.breadcrumbsItem}>
-              <NavLink to={breadcrumb.path} className={css.breadcrumbsLink}>
+              <NavLink end to={breadcrumb.path} className={css.breadcrumbsLink}>
                 {breadcrumb.name}
                 <img src={ICON_ARROW} className={css.breadcrumbsImage} />
               </NavLink>
