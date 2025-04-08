@@ -1,10 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import css from "./Product.module.css";
 
-export const Product = ({ name, price, photo }) => {
+export const Product = ({ id, name, price, photo }) => {
+  const params = useParams();
+
+  let productUrl;
+
+  if (params.subcategory) {
+    productUrl = `/${params.gender}/${params.category}/${params.subcategory}/${id}`;
+  } else {
+    productUrl = `/${params.gender}/${params.category}/${id}`;
+  }
+
   return (
     <>
-      <Link to="">
+      <Link to={productUrl}>
         <div className={css.productPhotoContainer}>
           <img
             src={photo}

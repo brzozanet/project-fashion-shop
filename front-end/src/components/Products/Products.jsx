@@ -1,8 +1,8 @@
 import { nanoid } from "nanoid";
 import { Product } from "../Product/Product";
 import { CATEGORIES } from "../../constans/categories";
-import css from "./Products.module.css";
 import { useParams } from "react-router-dom";
+import css from "./Products.module.css";
 
 export const Products = ({ data }) => {
   const params = useParams();
@@ -30,6 +30,7 @@ export const Products = ({ data }) => {
         {data.map((product) => {
           return (
             <Product
+              id={product.id}
               name={product.name}
               price={product.pricePLN}
               photo={product.photos[0]}

@@ -5,8 +5,9 @@ import { CATEGORIES } from "../../constans/categories";
 import ICON_ARROW from "../../assets/icon_arrow.svg";
 import css from "./Breadcrumbs.module.css";
 
-export const Breadcrumbs = () => {
+export const Breadcrumbs = ({ name }) => {
   const params = useParams();
+  console.log(params);
 
   const activeGenderName = GENDERS_TEXT_MAPPING.get(params.gender);
 
@@ -30,6 +31,13 @@ export const Breadcrumbs = () => {
     breadcrumbs.push({
       name: `${foundSubcategory.name}`,
       path: `/${params.gender}/${params.category}/${params.subcategory}`,
+    });
+  }
+
+  if (params.id) {
+    breadcrumbs.push({
+      name: name,
+      path: "",
     });
   }
 

@@ -4,28 +4,11 @@ import { ExpandableMenu } from "../../components/ExpandableMenu/ExpandableMenu";
 import { Breadcrumbs } from "../../components/Breadcrumbs/Breadcrumbs";
 import { Photos } from "../../components/Photos/Photos";
 import { Detail } from "../../components/Detail/Detail";
+import { useLoaderData } from "react-router-dom";
 import css from "./ProductDetails.module.css";
 
 export const ProductDetails = () => {
-  const productDetailsMockup = {
-    id: 1,
-    gender: "men",
-    category: "odziez",
-    subcategory: "koszulki",
-    name: "T-Shirt",
-    brand: "Top Brand",
-    pricePLN: 49,
-    priceUSD: 10,
-    photos: [
-      "http://localhost:3000/product-photos/man-t-shirt-1.jpg",
-      "http://localhost:3000/product-photos/man-t-shirt-4.jpg",
-      "http://localhost:3000/product-photos/man-t-shirt-3.jpg",
-    ],
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facilis aperiam, magnam dolorum sit expedita nihil nostrum, voluptates temporibus voluptatum atque ullam molestiae provident dolore eligendi? Esse amet dolore illum.",
-    maintenanceInfo:
-      "Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu. Nemo et nam quasi in suscipit earum odit laborum repellat quo dolore rem, sequi eaque sapiente quibu.",
-  };
+  const product = useLoaderData();
 
   return (
     <>
@@ -33,18 +16,15 @@ export const ProductDetails = () => {
         <FlexContainer>
           <ExpandableMenu />
           <div className={css.productDetailsWithBreadcrumbs}>
-            <Breadcrumbs />
+            <Breadcrumbs name={product.name} />
             <div className={css.productDetailContainer}>
-              <Photos
-                photos={productDetailsMockup.photos}
-                name={productDetailsMockup.name}
-              />
+              <Photos photos={product.photos} name={product.name} />
               <Detail
-                brand={productDetailsMockup.brand}
-                name={productDetailsMockup.name}
-                price={productDetailsMockup.pricePLN}
-                description={productDetailsMockup.description}
-                maintenanceInfo={productDetailsMockup.maintenanceInfo}
+                brand={product.brand}
+                name={product.name}
+                price={product.pricePLN}
+                description={product.description}
+                maintenanceInfo={product.maintenanceInfo}
               />
             </div>
           </div>
