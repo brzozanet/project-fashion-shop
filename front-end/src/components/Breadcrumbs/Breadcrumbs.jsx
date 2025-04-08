@@ -5,35 +5,35 @@ import { CATEGORIES } from "../../constans/categories";
 import ICON_ARROW from "../../assets/icon_arrow.svg";
 import css from "./Breadcrumbs.module.css";
 
-export const Breadcrumbs = ({ name }) => {
-  const params = useParams();
+export const Breadcrumbs = ({ id, gender, category, subcategory, name }) => {
+  // const params = useParams();
 
-  const activeGenderName = GENDERS_TEXT_MAPPING.get(params.gender);
+  // const activeGenderName = GENDERS_TEXT_MAPPING.get(params.gender);
 
-  const foundCategory = CATEGORIES.find(
-    (category) => params.category === category.path
-  );
+  // const foundCategory = CATEGORIES.find(
+  //   (category) => params.category === category.path
+  // );
 
   const breadcrumbs = [
-    { name: `${activeGenderName}`, path: `/${params.gender}` },
+    { name: `${gender}`, path: `/${gender}` },
     {
-      name: `${foundCategory.name}`,
-      path: `/${params.gender}/${params.category}`,
+      name: `${category}`,
+      path: `/${gender}/${category}`,
     },
   ];
 
-  if (params.subcategory) {
-    const foundSubcategory = foundCategory.subcategories.find(
-      (subcategory) => params.subcategory === subcategory.path
-    );
+  if (subcategory) {
+    // const foundSubcategory = foundCategory.subcategories.find(
+    //   (subcategory) => params.subcategory === subcategory.path
+    // );
 
     breadcrumbs.push({
-      name: `${foundSubcategory.name}`,
-      path: `/${params.gender}/${params.category}/${params.subcategory}`,
+      name: `${subcategory}`,
+      path: `/${gender}/${category}/${subcategory}`,
     });
   }
 
-  if (params.id) {
+  if (id) {
     breadcrumbs.push({
       name: name,
       path: "",

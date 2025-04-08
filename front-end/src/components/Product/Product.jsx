@@ -1,12 +1,18 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import css from "./Product.module.css";
 
-export const Product = ({ id, name, price, photo, subcategory }) => {
-  const params = useParams();
-
+export const Product = ({
+  id,
+  name,
+  price,
+  photo,
+  gender,
+  category,
+  subcategory,
+}) => {
   return (
     <>
-      <Link to={`/${params.gender}/${params.category}/${subcategory}/${id}`}>
+      <Link to={`/${gender}/${category}/${subcategory}/${id}`}>
         <div className={css.productPhotoContainer}>
           <img
             src={photo}

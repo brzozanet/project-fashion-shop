@@ -4,6 +4,7 @@ import { Hero } from "../../components/Hero/Hero";
 
 export const MainPage = () => {
   const data = useLoaderData();
+  console.log(data.bestsellers);
 
   return (
     <>

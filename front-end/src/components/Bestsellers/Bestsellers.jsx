@@ -14,9 +14,13 @@ export const Bestsellers = ({ bestsellersData }) => {
             {bestsellersData.map((product) => {
               return (
                 <Product
+                  id={product.id}
                   name={product.name}
                   price={product.pricePLN}
                   photo={product.photos[0]}
+                  gender={product.gender}
+                  category={product.subcategory}
+                  subcategory={product.subcategory}
                   key={nanoid()}
                 />
               );

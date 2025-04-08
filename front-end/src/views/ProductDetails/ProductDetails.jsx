@@ -16,7 +16,13 @@ export const ProductDetails = () => {
         <FlexContainer>
           <ExpandableMenu />
           <div className={css.productDetailsWithBreadcrumbs}>
-            <Breadcrumbs name={product.name} />
+            <Breadcrumbs
+              id={product.id}
+              gender={product.gender}
+              category={product.category}
+              subcategory={product.subcategory}
+              name={product.name}
+            />
             <div className={css.productDetailContainer}>
               <Photos photos={product.photos} name={product.name} />
               <Detail
