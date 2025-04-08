@@ -7,7 +7,6 @@ import css from "./Breadcrumbs.module.css";
 
 export const Breadcrumbs = ({ name }) => {
   const params = useParams();
-  console.log(params);
 
   const activeGenderName = GENDERS_TEXT_MAPPING.get(params.gender);
 
