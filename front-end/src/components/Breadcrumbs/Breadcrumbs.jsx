@@ -1,39 +1,27 @@
 import { NavLink, useParams } from "react-router-dom";
 import { nanoid } from "nanoid";
-import { GENDERS_TEXT_MAPPING } from "../../constans/mappings";
-import { CATEGORIES } from "../../constans/categories";
 import ICON_ARROW from "../../assets/icon_arrow.svg";
 import css from "./Breadcrumbs.module.css";
 
-export const Breadcrumbs = ({ id, gender, category, subcategory, name }) => {
-  // const params = useParams();
-
-  // const activeGenderName = GENDERS_TEXT_MAPPING.get(params.gender);
-
-  // const foundCategory = CATEGORIES.find(
-  //   (category) => params.category === category.path
-  // );
+export const Breadcrumbs = () => {
+  const params = useParams();
 
   const breadcrumbs = [
-    { name: `${gender}`, path: `/${gender}` },
+    { name: `${params.gender}`, path: `/${params.gender}` },
     {
-      name: `${category}`,
-      path: `/${gender}/${category}`,
+      name: `${params.category}`,
+      path: `/${params.gender}/${params.category}`,
     },
   ];
 
-  if (subcategory) {
-    // const foundSubcategory = foundCategory.subcategories.find(
-    //   (subcategory) => params.subcategory === subcategory.path
-    // );
-
+  if (params.subcategory) {
     breadcrumbs.push({
-      name: `${subcategory}`,
-      path: `/${gender}/${category}/${subcategory}`,
+      name: `${params.subcategory}`,
+      path: `/${params.gender}/${params.category}/${params.subcategory}`,
     });
   }
 
-  if (id) {
+  if (params.id) {
     breadcrumbs.push({
       name: name,
       path: "",

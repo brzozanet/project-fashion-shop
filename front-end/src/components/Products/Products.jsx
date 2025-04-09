@@ -35,7 +35,7 @@ export const Products = ({ data }) => {
               price={product.pricePLN}
               photo={product.photos[0]}
               gender={product.gender}
-              category={product.subcategory}
+              category={product.category}
               subcategory={product.subcategory}
               key={nanoid()}
             />

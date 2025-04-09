@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { GENDERS_PL_MAPPING } from "../../constans/mappings";
 import css from "./Product.module.css";
 
 export const Product = ({
@@ -10,9 +11,11 @@ export const Product = ({
   category,
   subcategory,
 }) => {
+  const genderPL = GENDERS_PL_MAPPING.get(gender);
+
   return (
     <>
-      <Link to={`/${gender}/${category}/${subcategory}/${id}`}>
+      <Link to={`/${genderPL}/${category}/${subcategory}/${id}`}>
         <div className={css.productPhotoContainer}>
           <img
             src={photo}
