@@ -15,7 +15,7 @@ export const ProductsList = () => {
         <FlexContainer>
           <ExpandableMenu />
           <div>
-            <Breadcrumbs />
+            <Breadcrumbs id={data.id} name={data.name} />
             <Products data={data} />
             <Pagination />
           </div>

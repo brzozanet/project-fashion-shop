@@ -1,11 +1,11 @@
 import { NavLink, useParams } from "react-router-dom";
 import { nanoid } from "nanoid";
 import { GENDERS_TEXT_MAPPING } from "../../constans/mappings";
+import { CATEGORIES } from "../../constans/categories";
 import ICON_ARROW from "../../assets/icon_arrow.svg";
 import css from "./Breadcrumbs.module.css";
-import { CATEGORIES } from "../../constans/categories";
 
-export const Breadcrumbs = () => {
+export const Breadcrumbs = ({ name }) => {
   const params = useParams();
 
   const genderText = GENDERS_TEXT_MAPPING.get(params.gender);
