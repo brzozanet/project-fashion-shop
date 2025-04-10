@@ -1,21 +1,14 @@
-import { Link } from "react-router-dom";
-import { GENDERS_PL_MAPPING } from "../../constans/mappings";
+import { Link, useParams } from "react-router-dom";
 import css from "./Product.module.css";
 
-export const Product = ({
-  id,
-  name,
-  price,
-  photo,
-  gender,
-  category,
-  subcategory,
-}) => {
-  const genderPL = GENDERS_PL_MAPPING.get(gender);
+export const Product = ({ id, name, price, photo }) => {
+  const params = useParams();
 
   return (
     <>
-      <Link to={`/${genderPL}/${category}/${subcategory}/${id}`}>
+      <Link
+        to={`/${params.gender}/${params.category}/${params.subcategory}/${id}`}
+      >
         <div className={css.productPhotoContainer}>
           <img
             src={photo}

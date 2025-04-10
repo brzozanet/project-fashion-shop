@@ -1,15 +1,23 @@
 import { NavLink, useParams } from "react-router-dom";
 import { nanoid } from "nanoid";
+import { GENDERS_TEXT_MAPPING } from "../../constans/mappings";
 import ICON_ARROW from "../../assets/icon_arrow.svg";
 import css from "./Breadcrumbs.module.css";
+import { CATEGORIES } from "../../constans/categories";
 
 export const Breadcrumbs = () => {
   const params = useParams();
 
+  const genderText = GENDERS_TEXT_MAPPING.get(params.gender);
+
+  const foundCategory = CATEGORIES.find(
+    (category) => category.path === params.category
+  );
+
   const breadcrumbs = [
-    { name: `${params.gender}`, path: `/${params.gender}` },
+    { name: `${genderText}`, path: `/${params.gender}` },
     {
-      name: `${params.category}`,
+      name: `${foundCategory.name}`,
       path: `/${params.gender}/${params.category}`,
     },
   ];
