@@ -23,8 +23,12 @@ export const Breadcrumbs = ({ name }) => {
   ];
 
   if (params.subcategory) {
+    const foundSubcategory = foundCategory.subcategories.find(
+      (subcategory) => subcategory.path === params.subcategory
+    );
+
     breadcrumbs.push({
-      name: `${params.subcategory}`,
+      name: `${foundSubcategory.name}`,
       path: `/${params.gender}/${params.category}/${params.subcategory}`,
     });
   }

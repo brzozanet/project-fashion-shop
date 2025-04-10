@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Favourites } from "./views/Favourites/Favourites";
 import { Cart } from "./views/Cart/Cart";
 import { Layout } from "./components/Layout/Layout";
+import { NotFound } from "./views/NotFound/NotFound";
 import { MainPage } from "./views/MainPage/MainPage";
 import { ProductsList } from "./views/ProductsList/ProductsList";
 import { loaderMainPage } from "./api/loaderMainPage";
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
   {
     element: <Layout />,
     path: "",
-    // errorElement: <NotFound />,
+    errorElement: <NotFound />,
     children: [
       {
         element: <MainPage />,
