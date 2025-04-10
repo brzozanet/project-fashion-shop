@@ -1,14 +1,14 @@
 import { redirect } from "react-router-dom";
 import { CATEGORIES } from "../constans/categories";
-import { GENDERS_MAPPING_EN } from "../constans/mappings";
+import { GENDERS_MAPPING } from "../constans/mappings";
 
 export const loaderProductsList = ({ params }) => {
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
-  const genderEN = GENDERS_MAPPING_EN.get(params.gender);
+  const gender = GENDERS_MAPPING.get(params.gender);
 
   const searchParams = new URLSearchParams();
 
-  searchParams.append("gender", genderEN);
+  searchParams.append("gender", gender);
 
   const foundCategory = CATEGORIES.find(
     (category) => category.path === params.category
