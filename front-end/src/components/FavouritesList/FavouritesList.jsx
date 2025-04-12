@@ -2,7 +2,7 @@ import { nanoid } from "nanoid";
 import { FavouriteProduct } from "../FavouriteProduct/FavouriteProduct";
 import css from "./FavouritesList.module.css";
 
-export const FavouritesList = ({ data }) => {
+export const FavouritesList = () => {
   const favouritesMockup = [
     {
       id: 26,
@@ -82,7 +82,6 @@ export const FavouritesList = ({ data }) => {
     },
   ];
 
-  console.log(data);
   return (
     <>
       <div className={css.favouritesList}>
