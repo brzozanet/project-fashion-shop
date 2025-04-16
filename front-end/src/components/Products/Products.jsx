@@ -2,8 +2,8 @@ import { nanoid } from "nanoid";
 import { Product } from "../Product/Product";
 import { CATEGORIES } from "../../constans/categories";
 import { useParams } from "react-router-dom";
-import css from "./Products.module.css";
 import { useEffect, useState } from "react";
+import css from "./Products.module.css";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -97,5 +97,3 @@ export const Products = ({ data }) => {
     </>
   );
 };
-
-// test

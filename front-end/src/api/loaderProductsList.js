@@ -35,5 +35,3 @@ export const loaderProductsList = ({ params }) => {
 
   return redirect(`/${params.gender}`);
 };
-
-// http://localhost:3000/products/?gender=men&category=odziez&subcategory=koszulki&_limit=4&_page=1
