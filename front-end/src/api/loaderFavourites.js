@@ -6,11 +6,9 @@ export const loaderFavourites = async () => {
     (await fetch(`${BACKEND_URL}/products`)).json(),
   ]);
 
-  console.log(favourites);
-  console.log(products);
-
   const userFavourites = products.filter((product) =>
     favourites.some((favourite) => favourite.productId === product.id)
   );
-  console.log(userFavourites);
+
+  return userFavourites;
 };
