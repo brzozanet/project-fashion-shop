@@ -2,8 +2,9 @@ import { redirect } from "react-router-dom";
 import { CATEGORIES } from "../constans/categories";
 import { GENDERS_MAPPING } from "../constans/mappings";
 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 export const loaderProductsList = ({ params }) => {
-  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
   const gender = GENDERS_MAPPING.get(params.gender);
 
   const searchParams = new URLSearchParams();
@@ -31,5 +32,8 @@ export const loaderProductsList = ({ params }) => {
 
     return fetch(`${BACKEND_URL}/products?${searchParams.toString()}`);
   }
+
   return redirect(`/${params.gender}`);
 };
+
+// http://localhost:3000/products/?gender=men&category=odziez&subcategory=koszulki&_limit=4&_page=1
