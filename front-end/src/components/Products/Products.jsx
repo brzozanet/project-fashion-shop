@@ -12,7 +12,7 @@ export const Products = ({ data }) => {
   const [isBottom, setIsBottom] = useState(false);
   const [products, setProducts] = useState(data);
 
-  console.log(isBottom);
+  // console.log(isBottom);
 
   useEffect(() => {
     const fetchProducts = async (p) => {
@@ -20,28 +20,22 @@ export const Products = ({ data }) => {
         `${BACKEND_URL}/products/?gender=men&category=odziez&subcategory=koszulki&_page=${p}`
       );
 
-      const json = await response.json();
-      console.log(json);
+      const apiProducts = await response.json();
+      console.log(apiProducts);
 
-      setProducts((state) => [...state, json]);
+      if (apiProducts.length > 0) {
+        setProducts((state) => [...state, ...apiProducts]);
+      }
     };
 
     fetchProducts(page);
   }, [page]);
-
-  //
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const windowHeight = window.innerHeight;
       const fullHeight = document.documentElement.scrollHeight;
-
-      // if (scrollTop + windowHeight >= fullHeight) {
-      //   setIsBottom(true);
-      // } else {
-      //   setIsBottom(false);
-      // }
 
       setIsBottom(scrollTop + windowHeight >= fullHeight);
       setPage((state) => state + 1);
@@ -54,8 +48,6 @@ export const Products = ({ data }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  //
 
   const params = useParams();
 
@@ -83,13 +75,13 @@ export const Products = ({ data }) => {
         {products.map((product) => {
           return (
             <Product
+              key={nanoid()}
               id={product.id}
               name={product.name}
               price={product.pricePLN}
-              photo={product.photos[0]}
+              photo={product.photos && product.photos[0]}
               category={product.category}
               subcategory={product.subcategory}
-              key={nanoid()}
             />
           );
         })}
