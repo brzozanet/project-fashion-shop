@@ -11,10 +11,15 @@ import { loaderProductsList } from "./api/loaderProductsList";
 import { loaderProductDetails } from "./api/loaderProductDetails";
 import { ProductDetails } from "./views/ProductDetails/ProductDetails";
 import { loaderFavourites } from "./api/loaderFavourites";
+import { actionAddToFavourities } from "./api/actionAddToFavourities";
 import "./styles/globals.css";
 import "./styles/theme.css";
 
 const router = createBrowserRouter([
+  {
+    path: "/dodaj-do-ulubionych/:id",
+    action: actionAddToFavourities,
+  },
   {
     element: <Layout />,
     path: "",
