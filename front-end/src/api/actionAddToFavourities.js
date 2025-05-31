@@ -1,3 +1,3 @@
-export const actionAddToFavourities = async ({ params }) => {
+export const actionAddToFavourities = ({ params }) => {
   return console.log("action for id:", params.id);
 };
