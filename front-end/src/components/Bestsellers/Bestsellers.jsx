@@ -21,7 +21,7 @@ export const Bestsellers = ({ bestsellersData }) => {
                   gender={product.gender}
                   category={product.category}
                   subcategory={product.subcategory}
-                  key={nanoid()}
+                  key={product.id}
                 />
               );
             })}
