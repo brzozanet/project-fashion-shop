@@ -16,16 +16,12 @@ export const Product = ({ id, name, price, photo, category, subcategory }) => {
             className={css.productPhotoImg}
           />
         </Link>
-        <fetcher.Form
-          method="post"
-          action={`/dodaj-do-ulubionych/${id}`}
-          onClick={(event) => event.stopPropagation()}
-        >
+        <fetcher.Form method="post" action={`/dodaj-do-ulubionych/${id}`}>
           <button
             type="submit"
             className={css.heartIcon}
             disabled={fetcher.state === "submitting"}
-          ></button>
+          />
         </fetcher.Form>
       </div>
       <Link to={`/${params.gender}/${category}/${subcategory}/${id}`}>
