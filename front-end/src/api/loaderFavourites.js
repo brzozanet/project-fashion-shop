@@ -10,7 +10,5 @@ export const loaderFavourites = async () => {
     favourites.some((favourite) => favourite.productId === product.id)
   );
 
-  console.log(userFavourites);
-
   return userFavourites;
 };

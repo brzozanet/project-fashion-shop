@@ -5,7 +5,6 @@ import { PageTitle } from "../../components/PageTitle/PageTitle";
 
 export const Favourites = () => {
   const data = useLoaderData();
-  console.log(data);
 
   return (
     <>
