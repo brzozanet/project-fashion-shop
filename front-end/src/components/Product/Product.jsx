@@ -1,7 +1,15 @@
 import { Link, useParams, useFetcher } from "react-router-dom";
 import css from "./Product.module.css";
 
-export const Product = ({ id, name, price, photo, category, subcategory }) => {
+export const Product = ({
+  id,
+  name,
+  price,
+  photo,
+  category,
+  subcategory,
+  isProductInFavourites,
+}) => {
   const params = useParams();
   const fetcher = useFetcher();
 
@@ -23,8 +31,10 @@ export const Product = ({ id, name, price, photo, category, subcategory }) => {
         >
           <button
             type="submit"
-            className={css.heartIcon}
-            disabled={fetcher.state === "submitting"}
+            className={
+              isProductInFavourites ? css.heartIconDisabled : css.heartIcon
+            }
+            disabled={fetcher.state === "submitting" || isProductInFavourites}
           />
         </fetcher.Form>
       </div>

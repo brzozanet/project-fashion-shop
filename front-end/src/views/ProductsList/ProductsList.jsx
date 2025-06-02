@@ -8,7 +8,8 @@ import { useLoaderData } from "react-router-dom";
 
 export const ProductsList = () => {
   const data = useLoaderData();
-  console.log(data);
+  const products = data[0];
+  const favourites = data[1];
 
   return (
     <>
@@ -16,8 +17,8 @@ export const ProductsList = () => {
         <FlexContainer>
           <ExpandableMenu />
           <div>
-            <Breadcrumbs id={data.id} name={data.name} />
-            <Products data={data} />
+            <Breadcrumbs id={products.id} name={products.name} />
+            <Products products={products} favourites={favourites} />
             <Pagination />
           </div>
         </FlexContainer>

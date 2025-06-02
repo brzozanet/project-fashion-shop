@@ -2,7 +2,7 @@ import { redirect } from "react-router-dom";
 import { CATEGORIES } from "../constans/categories";
 import { GENDERS_MAPPING } from "../constans/mappings";
 
-export const loaderProductsList = ({ params }) => {
+export const loaderProductsList = async ({ params }) => {
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
   const gender = GENDERS_MAPPING.get(params.gender);
 
@@ -29,7 +29,14 @@ export const loaderProductsList = ({ params }) => {
       searchParams.append("subcategory", params.subcategory);
     }
 
-    return fetch(`${BACKEND_URL}/products?${searchParams.toString()}`);
+    const [products, favourites] = await Promise.all([
+      (
+        await fetch(`${BACKEND_URL}/products?${searchParams.toString()}`)
+      ).json(),
+      (await fetch(`${BACKEND_URL}/favourites`)).json(),
+    ]);
+
+    return [products, favourites];
   }
   return redirect(`/${params.gender}`);
 };

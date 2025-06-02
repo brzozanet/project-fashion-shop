@@ -3,7 +3,7 @@ import { CATEGORIES } from "../../constans/categories";
 import { useParams } from "react-router-dom";
 import css from "./Products.module.css";
 
-export const Products = ({ data }) => {
+export const Products = ({ products, favourites }) => {
   const params = useParams();
 
   let productsTitle;
@@ -22,11 +22,17 @@ export const Products = ({ data }) => {
     productsTitle = activeSubcategory.name;
   }
 
+  const allFavouritesIds = favourites.map((favourite) => favourite.productId);
+
+  const isProductInFavourites = (productId) => {
+    return allFavouritesIds.includes(productId);
+  };
+
   return (
     <>
       <h2 className={css.productsTitle}>{productsTitle}</h2>
       <div className={css.products}>
-        {data.map((product) => {
+        {products.map((product) => {
           return (
             <Product
               id={product.id}
@@ -36,6 +42,7 @@ export const Products = ({ data }) => {
               category={product.category}
               subcategory={product.subcategory}
               key={product.id}
+              isProductInFavourites={isProductInFavourites(product.id)}
             />
           );
         })}
