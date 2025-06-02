@@ -1,4 +1,3 @@
-import { nanoid } from "nanoid";
 import { Product } from "../Product/Product";
 import { CATEGORIES } from "../../constans/categories";
 import { useParams } from "react-router-dom";
@@ -36,7 +35,7 @@ export const Products = ({ data }) => {
               photo={product.photos[0]}
               category={product.category}
               subcategory={product.subcategory}
-              key={nanoid()}
+              key={product.id}
             />
           );
         })}
