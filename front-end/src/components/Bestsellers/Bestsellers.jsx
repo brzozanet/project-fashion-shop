@@ -9,7 +9,7 @@ export const Bestsellers = ({ bestsellersData }) => {
     <>
       <div className={css.bestsellers}>
         <CenteredContent>
-          <PageTitle>Sprawdź nasze bestellery</PageTitle>
+          <PageTitle>Sprawdź nasze bestelleryyyy</PageTitle>
           <div className={css.bestsellersList}>
             {bestsellersData.map((product) => {
               return (
