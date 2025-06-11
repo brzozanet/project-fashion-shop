@@ -1,3 +1,3 @@
-export const actionDeleteFromFavourites = () => {
-  console.log("action delete")
-}
+export const actionDeleteFromFavourites = ({ params }) => {
+  console.log("action delete", params.id);
+};
