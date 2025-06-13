@@ -1,4 +1,3 @@
-import { nanoid } from "nanoid";
 import { CenteredContent } from "../CenteredContent/CenteredContent";
 import { Product } from "../Product/Product";
 import { PageTitle } from "../PageTitle/PageTitle";
@@ -9,7 +8,7 @@ export const Bestsellers = ({ bestsellersData }) => {
     <>
       <div className={css.bestsellers}>
         <CenteredContent>
-          <PageTitle>Sprawdź nasze bestelleryyyy</PageTitle>
+          <PageTitle>Sprawdź nasze bestellery</PageTitle>
           <div className={css.bestsellersList}>
             {bestsellersData.map((product) => {
               return (
