@@ -48,7 +48,7 @@ export const FavouriteProduct = ({
             </div>
             <div>
               <Form method="DELETE" action={`/usun-z-ulubionych/${id}`}>
-                <button type="submit">
+                <button>
                   <img src={ICON_DELETE} width="14" height="14" />
                   <span className={css.favouriteIconText}>
                     Usuń z ulubionych

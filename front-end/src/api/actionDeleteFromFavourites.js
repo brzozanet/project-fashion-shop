@@ -1,4 +1,7 @@
 export const actionDeleteFromFavourites = ({ params }) => {
-  console.log("action delete", params.id);
-  return null;
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
+  return fetch(`${BACKEND_URL}/favourites/${params.id}`, {
+    method: "DELETE",
+  });
 };
