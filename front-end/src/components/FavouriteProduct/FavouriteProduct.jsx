@@ -1,15 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useFetcher } from "react-router-dom";
 import ICON_DELETE from "../../assets/icon_delete.svg";
 import ICON_CART from "../../assets/icon_cart.svg";
 import css from "./FavouriteProduct.module.css";
 
 export const FavouriteProduct = ({
+  id,
   image,
   brand,
   name,
   description,
   price,
 }) => {
+  const fetcher = useFetcher();
+  const { Form } = fetcher;
+
   const truncateTextSmart = (text, maxLength) => {
     if (text.length <= maxLength) return text;
 
@@ -43,10 +47,14 @@ export const FavouriteProduct = ({
               <p>{truncateTextSmart(description, 100)}</p>
             </div>
             <div>
-              <Link to="" className={css.favouriteIcon}>
-                <img src={ICON_DELETE} width="14" height="14" />
-                <span className={css.favouriteIconText}>Usuń z ulubionych</span>
-              </Link>
+              <Form method="DELETE" action={`/usun-z-ulubionych/${id}`}>
+                <button type="submit">
+                  <img src={ICON_DELETE} width="14" height="14" />
+                  <span className={css.favouriteIconText}>
+                    Usuń z ulubionych
+                  </span>
+                </button>
+              </Form>
               <Link to="" className={css.favouriteIcon}>
                 <img src={ICON_CART} width="14" height="14" />
                 <span className={css.favouriteIconText}>Dodaj do koszyka</span>

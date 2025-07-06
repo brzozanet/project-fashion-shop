@@ -12,6 +12,7 @@ import { loaderProductDetails } from "./api/loaderProductDetails";
 import { ProductDetails } from "./views/ProductDetails/ProductDetails";
 import { loaderFavourites } from "./api/loaderFavourites";
 import { actionAddToFavourites } from "./api/actionAddToFavourites";
+import { actionDeleteFromFavourites } from "./api/actionDeleteFromFavourites";
 import "./styles/globals.css";
 import "./styles/theme.css";
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/dodaj-do-ulubionych/:id",
         action: actionAddToFavourites,
+      },
+      {
+        path: "/usun-z-ulubionych/:id",
+        action: actionDeleteFromFavourites,
       },
       {
         element: <MainPage />,
