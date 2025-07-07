@@ -4,7 +4,7 @@ import ICON_CART from "../../assets/icon_cart.svg";
 import css from "./FavouriteProduct.module.css";
 
 export const FavouriteProduct = ({
-  id,
+  favouriteId,
   image,
   brand,
   name,
@@ -46,19 +46,22 @@ export const FavouriteProduct = ({
               </h3>
               <p>{truncateTextSmart(description, 100)}</p>
             </div>
-            <div>
-              <Form method="DELETE" action={`/usun-z-ulubionych/${id}`}>
-                <button>
+            <div className={css.favouritesButtons}>
+              <Form
+                method="DELETE"
+                action={`/usun-z-ulubionych/${favouriteId}`}
+              >
+                <button className={css.favouriteButtonAction}>
                   <img src={ICON_DELETE} width="14" height="14" />
                   <span className={css.favouriteIconText}>
                     Usuń z ulubionych
                   </span>
                 </button>
               </Form>
-              <Link to="" className={css.favouriteIcon}>
+              <button className={css.favouriteButtonAction}>
                 <img src={ICON_CART} width="14" height="14" />
                 <span className={css.favouriteIconText}>Dodaj do koszyka</span>
-              </Link>
+              </button>
             </div>
           </div>
         </div>

@@ -50,3 +50,13 @@
   margin-left: 0.2rem;
   font-size: 0.8rem;
 }
+
+.favouritesButtons {
+  display: flex;
+  gap: 20px;
+}
+
+.favouriteButtonAction {
+  border: none;
+  background: none;
+}

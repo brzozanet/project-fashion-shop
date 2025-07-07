@@ -9,8 +9,8 @@ export const FavouritesProvider = ({ children }) => {
   const [favourites, setFavourites] = useState([]);
 
   return (
-    <FavouritesContext.Provider value={{ favourites, setFavourites }}>
+    <FavouritesContext value={{ favourites, setFavourites }}>
       {children}
-    </FavouritesContext.Provider>
+    </FavouritesContext>
   );
 };

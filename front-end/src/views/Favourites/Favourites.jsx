@@ -5,12 +5,21 @@ import { PageTitle } from "../../components/PageTitle/PageTitle";
 
 export const Favourites = () => {
   const data = useLoaderData();
+  const [userFavouritesProducts] = data;
 
   return (
     <>
       <CenteredContent>
-        <PageTitle>Ulubione {`(${data.length})`}</PageTitle>
-        <FavouritesList data={data} />
+        {userFavouritesProducts.length !== 0 ? (
+          <>
+            <PageTitle>
+              Ulubione {`(${userFavouritesProducts.length})`}
+            </PageTitle>
+            <FavouritesList data={data} />
+          </>
+        ) : (
+          <PageTitle>Nie masz żadnych ulubionych produktów</PageTitle>
+        )}
       </CenteredContent>
     </>
   );
