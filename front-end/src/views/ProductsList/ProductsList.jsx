@@ -7,9 +7,7 @@ import { Pagination } from "../../components/Pagination/Pagination";
 import { useLoaderData } from "react-router-dom";
 
 export const ProductsList = () => {
-  const data = useLoaderData();
-  const products = data[0];
-  const favourites = data[1];
+  const [products, favourites] = useLoaderData();
 
   return (
     <>

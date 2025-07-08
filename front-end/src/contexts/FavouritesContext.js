@@ -1,3 +1,5 @@
+// TODO: plik nieużywany, do usunięcia
+
 import { createContext, useState } from "react";
 
 export const FavouritesContext = createContext({
