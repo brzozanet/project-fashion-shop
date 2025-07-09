@@ -3,7 +3,10 @@ import { Product } from "../Product/Product";
 import { PageTitle } from "../PageTitle/PageTitle";
 import css from "./Bestsellers.module.css";
 
-export const Bestsellers = ({ bestsellersData }) => {
+export const Bestsellers = ({ bestsellersData, favouritesData }) => {
+  console.log(bestsellersData);
+  console.log(favouritesData);
+
   return (
     <>
       <div className={css.bestsellers}>

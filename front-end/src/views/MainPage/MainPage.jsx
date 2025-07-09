@@ -3,12 +3,15 @@ import { Bestsellers } from "../../components/Bestsellers/Bestsellers";
 import { Hero } from "../../components/Hero/Hero";
 
 export const MainPage = () => {
-  const data = useLoaderData();
+  const [genderProducts, favouriteProducts] = useLoaderData();
 
   return (
     <>
-      <Hero imageUrl={data.heroImageUrl} />
-      <Bestsellers bestsellersData={data.bestsellers} />
+      <Hero imageUrl={genderProducts.heroImageUrl} />
+      <Bestsellers
+        bestsellersData={genderProducts.bestsellers}
+        favouritesData={favouriteProducts}
+      />
     </>
   );
 };
