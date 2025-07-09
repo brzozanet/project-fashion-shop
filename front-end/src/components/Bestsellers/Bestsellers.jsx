@@ -19,13 +19,13 @@ export const Bestsellers = ({ bestsellersData, favouritesData }) => {
                 <Product
                   id={product.id}
                   // NOTE: optional chaining
-                  isProductInFavourites={favouriteRecord?.productId}
                   name={product.name}
                   price={product.pricePLN}
                   photo={product.photos[0]}
                   gender={product.gender}
                   category={product.category}
                   subcategory={product.subcategory}
+                  isProductInFavourites={favouriteRecord?.productId}
                   key={product.id}
                 />
               );
