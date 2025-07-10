@@ -1,6 +1,6 @@
 import { redirect } from "react-router-dom";
-import { CATEGORIES } from "../constans/categories";
-import { GENDERS_MAPPING } from "../constans/mappings";
+import { CATEGORIES } from "../constants/categories";
+import { GENDERS_MAPPING } from "../constants/mappings";
 
 export const loaderProductsList = async ({ params }) => {
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;

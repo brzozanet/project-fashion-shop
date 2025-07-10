@@ -1,6 +1,6 @@
 import { NavLink, useParams } from "react-router-dom";
-import { CATEGORIES } from "../../constans/categories";
-import { GENDERS_TEXT_MAPPING } from "../../constans/mappings";
+import { CATEGORIES } from "../../constants/categories";
+import { GENDERS_TEXT_MAPPING } from "../../constants/mappings";
 import { nanoid } from "nanoid";
 import ICON_ARROW from "../../assets/icon_arrow.svg";
 import css from "./ExpandableMenu.module.css";

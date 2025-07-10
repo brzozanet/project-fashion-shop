@@ -1,5 +1,5 @@
 import { Product } from "../Product/Product";
-import { CATEGORIES } from "../../constans/categories";
+import { CATEGORIES } from "../../constants/categories";
 import { useParams } from "react-router-dom";
 import css from "./Products.module.css";
 

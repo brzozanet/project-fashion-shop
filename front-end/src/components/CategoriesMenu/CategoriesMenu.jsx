@@ -1,4 +1,4 @@
-import { CATEGORIES } from "../../constans/categories";
+import { CATEGORIES } from "../../constants/categories";
 import { NavLink, useParams } from "react-router-dom";
 import { nanoid } from "nanoid";
 import css from "./CategoriesMenu.module.css";

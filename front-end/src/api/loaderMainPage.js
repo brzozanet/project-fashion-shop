@@ -1,5 +1,5 @@
 import { redirect } from "react-router-dom";
-import { GENDERS_MAPPING } from "../constans/mappings";
+import { GENDERS_MAPPING } from "../constants/mappings";
 
 export const loaderMainPage = async ({ params }) => {
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;

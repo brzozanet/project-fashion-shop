@@ -1,7 +1,7 @@
 import { NavLink, useParams } from "react-router-dom";
 import { nanoid } from "nanoid";
-import { GENDERS_TEXT_MAPPING } from "../../constans/mappings";
-import { CATEGORIES } from "../../constans/categories";
+import { GENDERS_TEXT_MAPPING } from "../../constants/mappings";
+import { CATEGORIES } from "../../constants/categories";
 import ICON_ARROW from "../../assets/icon_arrow.svg";
 import css from "./Breadcrumbs.module.css";
 

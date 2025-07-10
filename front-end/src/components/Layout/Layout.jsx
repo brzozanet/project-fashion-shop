@@ -1,4 +1,4 @@
-import { CURRENCIES, DEFAULT_CURRENCY } from "../../constans/curriencies";
+import { DEFAULT_CURRENCY } from "../../constants/curriencies";
 import { Outlet } from "react-router-dom";
 import { CategoriesMenu } from "../CategoriesMenu/CategoriesMenu";
 import { CurrencySelector } from "../CurrencySelector/CurrencySelector";

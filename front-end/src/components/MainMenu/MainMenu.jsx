@@ -1,4 +1,4 @@
-import { GENDERS } from "../../constans/genders";
+import { GENDERS } from "../../constants/genders";
 import { NavLink } from "react-router-dom";
 import { nanoid } from "nanoid";
 import css from "./MainMenu.module.css";

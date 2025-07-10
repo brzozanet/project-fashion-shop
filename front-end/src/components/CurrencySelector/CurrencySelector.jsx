@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import { CURRENCIES } from "../../constans/curriencies";
+import { CURRENCIES } from "../../constants/curriencies";
 import css from "./CurrencySelector.module.css";
 
 export const CurrencySelector = ({ setCurrency }) => {
