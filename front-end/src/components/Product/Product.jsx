@@ -14,7 +14,6 @@ export const Product = ({
 }) => {
   const params = useParams();
   const fetcher = useFetcher();
-
   const [currency] = useContext(CurrencyContext);
 
   return (

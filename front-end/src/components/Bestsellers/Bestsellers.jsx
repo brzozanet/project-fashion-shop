@@ -22,7 +22,7 @@ export const Bestsellers = ({ bestsellersData, favouritesData }) => {
               return (
                 <Product
                   id={product.id}
-                  // NOTE: optional chaining
+                  // Optional chaining
                   name={product.name}
                   price={`${product[`price${currency}`]}`}
                   photo={product.photos[0]}
