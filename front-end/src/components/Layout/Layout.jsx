@@ -1,3 +1,4 @@
+import { CURRENCIES, DEFAULT_CURRENCY } from "../../constans/curriencies";
 import { Outlet } from "react-router-dom";
 import { CategoriesMenu } from "../CategoriesMenu/CategoriesMenu";
 import { CurrencySelector } from "../CurrencySelector/CurrencySelector";
@@ -11,7 +12,7 @@ import { CurrencyContext } from "../../contexts/currencyContext";
 import { useState } from "react";
 
 export const Layout = () => {
-  const [currency, setCurrency] = useState("PLN");
+  const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
 
   console.log(currency);
 

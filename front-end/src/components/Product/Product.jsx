@@ -1,5 +1,6 @@
 import { Link, useParams, useFetcher } from "react-router-dom";
 import css from "./Product.module.css";
+import { CurrencyContext } from "../../contexts/currencyContext";
 
 export const Product = ({
   id,
@@ -12,6 +13,8 @@ export const Product = ({
 }) => {
   const params = useParams();
   const fetcher = useFetcher();
+
+  console.log(CurrencyContext);
 
   return (
     <div className={css.product}>
