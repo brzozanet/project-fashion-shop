@@ -6,7 +6,6 @@ import { CurrencyContext } from "../../contexts/currencyContext";
 
 export const CurrencySelector = () => {
   const [currency, setCurrency] = useContext(CurrencyContext);
-  console.log(currency);
 
   const handleCurrencyChange = (event) => {
     setCurrency(event.target.value);
