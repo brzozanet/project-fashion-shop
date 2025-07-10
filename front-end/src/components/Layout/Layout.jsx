@@ -14,8 +14,6 @@ import { useState } from "react";
 export const Layout = () => {
   const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
 
-  console.log(currency);
-
   return (
     <>
       <MainContent>
@@ -24,7 +22,7 @@ export const Layout = () => {
             <MainMenu />
             <Logo />
             <div>
-              <CurrencySelector setCurrency={setCurrency} />
+              <CurrencySelector />
               <IconMenu />
             </div>
           </TopBar>

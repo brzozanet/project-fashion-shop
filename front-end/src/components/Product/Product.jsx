@@ -1,6 +1,7 @@
 import { Link, useParams, useFetcher } from "react-router-dom";
-import css from "./Product.module.css";
 import { CurrencyContext } from "../../contexts/currencyContext";
+import { useContext } from "react";
+import css from "./Product.module.css";
 
 export const Product = ({
   id,
@@ -14,7 +15,7 @@ export const Product = ({
   const params = useParams();
   const fetcher = useFetcher();
 
-  console.log(CurrencyContext);
+  const [currency] = useContext(CurrencyContext);
 
   return (
     <div className={css.product}>
@@ -43,7 +44,9 @@ export const Product = ({
       </div>
       <Link to={`/${params.gender}/${category}/${subcategory}/${id}`}>
         <h3 className={css.productTitle}>{name}</h3>
-        <p className={css.productPrice}>{price} zł</p>
+        <p className={css.productPrice}>
+          {price} {currency}
+        </p>
       </Link>
     </div>
   );

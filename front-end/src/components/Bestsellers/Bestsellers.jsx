@@ -1,9 +1,13 @@
 import { CenteredContent } from "../CenteredContent/CenteredContent";
 import { Product } from "../Product/Product";
 import { PageTitle } from "../PageTitle/PageTitle";
+import { useContext } from "react";
+import { CurrencyContext } from "../../contexts/currencyContext";
 import css from "./Bestsellers.module.css";
 
 export const Bestsellers = ({ bestsellersData, favouritesData }) => {
+  const [currency] = useContext(CurrencyContext);
+
   return (
     <>
       <div className={css.bestsellers}>
@@ -20,7 +24,7 @@ export const Bestsellers = ({ bestsellersData, favouritesData }) => {
                   id={product.id}
                   // NOTE: optional chaining
                   name={product.name}
-                  price={product.pricePLN}
+                  price={`${product[`price${currency}`]}`}
                   photo={product.photos[0]}
                   gender={product.gender}
                   category={product.category}

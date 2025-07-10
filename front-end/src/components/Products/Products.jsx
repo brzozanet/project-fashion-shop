@@ -1,10 +1,13 @@
 import { Product } from "../Product/Product";
 import { CATEGORIES } from "../../constants/categories";
 import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import { CurrencyContext } from "../../contexts/currencyContext";
 import css from "./Products.module.css";
 
 export const Products = ({ products, favourites }) => {
   const params = useParams();
+  const [currency] = useContext(CurrencyContext);
 
   let productsTitle;
 
@@ -37,7 +40,7 @@ export const Products = ({ products, favourites }) => {
             <Product
               id={product.id}
               name={product.name}
-              price={product.pricePLN}
+              price={`${product[`price${currency}`]}`}
               photo={product.photos[0]}
               category={product.category}
               subcategory={product.subcategory}

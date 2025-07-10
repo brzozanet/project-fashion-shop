@@ -1,19 +1,28 @@
 import { nanoid } from "nanoid";
 import { CURRENCIES } from "../../constants/curriencies";
 import css from "./CurrencySelector.module.css";
+import { useContext } from "react";
+import { CurrencyContext } from "../../contexts/currencyContext";
 
-export const CurrencySelector = ({ setCurrency }) => {
+export const CurrencySelector = () => {
+  const [currency, setCurrency] = useContext(CurrencyContext);
+  console.log(currency);
+
   const handleCurrencyChange = (event) => {
     setCurrency(event.target.value);
   };
 
   return (
     <>
-      <select className={css.currencySelector} onChange={handleCurrencyChange}>
-        {CURRENCIES.map((currency) => {
+      <select
+        className={css.currencySelector}
+        value={currency}
+        onChange={handleCurrencyChange}
+      >
+        {CURRENCIES.map((currrency) => {
           return (
-            <option value={currency.name} key={nanoid()}>
-              {currency.name}
+            <option value={currrency.name} key={nanoid()}>
+              {currrency.name}
             </option>
           );
         })}
