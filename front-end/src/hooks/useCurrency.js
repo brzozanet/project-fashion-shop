@@ -24,5 +24,3 @@ export const useCurrency = () => {
 
   return [currency, setCurrency];
 };
-
-// TODO: apply localStorage
