@@ -8,7 +8,9 @@ import { MainContent } from "../MainContent/MainContent";
 import { MainMenu } from "../MainMenu/MainMenu";
 import { TopBar } from "../TopBar/TopBar";
 import { CurrencyContext } from "../../contexts/currencyContext";
+import { CartContext } from "../../contexts/CartContext";
 import { useCurrency } from "../../hooks/useCurrency";
+import { cartProductsMockup } from "../../mockups/cartProductsMockup";
 
 export const Layout = () => {
   const [currency, setCurrency] = useCurrency();
@@ -16,18 +18,20 @@ export const Layout = () => {
   return (
     <>
       <CurrencyContext value={[currency, setCurrency]}>
-        <MainContent>
-          <TopBar>
-            <MainMenu />
-            <Logo />
-            <div>
-              <CurrencySelector />
-              <IconMenu />
-            </div>
-          </TopBar>
-          <CategoriesMenu />
-          <Outlet />
-        </MainContent>
+        <CartContext value={[cartProductsMockup]}>
+          <MainContent>
+            <TopBar>
+              <MainMenu />
+              <Logo />
+              <div>
+                <CurrencySelector />
+                <IconMenu />
+              </div>
+            </TopBar>
+            <CategoriesMenu />
+            <Outlet />
+          </MainContent>
+        </CartContext>
       </CurrencyContext>
       <Footer />
     </>
