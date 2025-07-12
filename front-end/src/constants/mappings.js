@@ -9,3 +9,8 @@ export const GENDERS_TEXT_MAPPING = new Map([
   ["mezczyzna", "Mężczyzna"],
   ["dziecko", "Dziecko"],
 ]);
+
+export const CURRENCY_MAPPING = new Map([
+  ["PLN", "zł"],
+  ["EUR", "euro"],
+]);

@@ -6,6 +6,8 @@ import css from "./CartProductsList.module.css";
 
 export const CartProductsList = () => {
   const [currency] = useContext(CurrencyContext);
+
+  // TODO: mockup!
   const cartProductsMockup = [
     {
       id: 26,
