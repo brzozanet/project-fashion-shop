@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CurrencyContext } from "../../contexts/currencyContext";
 import ICON_DELETE from "../../assets/icon_delete.svg";
 import css from "./CartProduct.module.css";
 
 export const CartProduct = ({ brand, name, image, description, price }) => {
+  const [currency] = useContext(CurrencyContext);
+
   const truncateTextSmart = (text, maxLength) => {
     if (text.length <= maxLength) return text;
 
@@ -42,7 +46,9 @@ export const CartProduct = ({ brand, name, image, description, price }) => {
           </div>
         </div>
         <div className={css.cartProductBox}>
-          <p className={css.cartProductPrice}>{price} zł</p>
+          <p className={css.cartProductPrice}>
+            {price} {currency}
+          </p>
         </div>
       </div>
     </>

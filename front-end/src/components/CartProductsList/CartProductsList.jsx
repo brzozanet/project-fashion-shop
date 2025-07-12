@@ -1,8 +1,11 @@
 import { nanoid } from "nanoid";
 import { CartProduct } from "../CartProduct/CartProduct";
+import { useContext } from "react";
+import { CurrencyContext } from "../../contexts/currencyContext";
 import css from "./CartProductsList.module.css";
 
 export const CartProductsList = () => {
+  const [currency] = useContext(CurrencyContext);
   const cartProductsMockup = [
     {
       id: 26,
@@ -92,7 +95,7 @@ export const CartProductsList = () => {
               name={product.name}
               image={product.photos[0]}
               description={product.description}
-              price={product.pricePLN}
+              price={product[`price${currency}`]}
               key={nanoid()}
             />
           );
