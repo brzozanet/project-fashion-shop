@@ -24,6 +24,7 @@ export const FavouritesList = ({
               // NOTE: optional chaining
               favouriteId={favouriteRecord?.id}
               description={product.description}
+              // NOTE: dynamic access
               price={product[`price${currency}`]}
               key={product.id}
               // key={nanoid()}

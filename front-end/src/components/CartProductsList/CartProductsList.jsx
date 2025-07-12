@@ -95,6 +95,7 @@ export const CartProductsList = () => {
               name={product.name}
               image={product.photos[0]}
               description={product.description}
+              // NOTE: dynamic access
               price={product[`price${currency}`]}
               key={nanoid()}
             />

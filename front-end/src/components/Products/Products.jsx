@@ -40,6 +40,7 @@ export const Products = ({ products, favourites }) => {
             <Product
               id={product.id}
               name={product.name}
+              // NOTE: dynamic access
               price={`${product[`price${currency}`]}`}
               photo={product.photos[0]}
               category={product.category}
