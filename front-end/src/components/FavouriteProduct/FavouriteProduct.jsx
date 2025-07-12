@@ -1,4 +1,6 @@
-import { Link, useFetcher } from "react-router-dom";
+import { useFetcher } from "react-router-dom";
+import { useContext } from "react";
+import { CurrencyContext } from "../../contexts/currencyContext";
 import ICON_DELETE from "../../assets/icon_delete.svg";
 import ICON_CART from "../../assets/icon_cart.svg";
 import css from "./FavouriteProduct.module.css";
@@ -13,6 +15,7 @@ export const FavouriteProduct = ({
 }) => {
   const fetcher = useFetcher();
   const { Form } = fetcher;
+  const [currency] = useContext(CurrencyContext);
 
   const truncateTextSmart = (text, maxLength) => {
     if (text.length <= maxLength) return text;
@@ -66,7 +69,9 @@ export const FavouriteProduct = ({
           </div>
         </div>
         <div className={css.favouriteBox}>
-          <p className={css.favouritePrice}>{price} zł</p>
+          <p className={css.favouritePrice}>
+            {price} {currency}
+          </p>
         </div>
       </div>
     </>

@@ -22,13 +22,13 @@ export const Bestsellers = ({ bestsellersData, favouritesData }) => {
               return (
                 <Product
                   id={product.id}
-                  // Optional chaining
                   name={product.name}
                   price={`${product[`price${currency}`]}`}
                   photo={product.photos[0]}
                   gender={product.gender}
                   category={product.category}
                   subcategory={product.subcategory}
+                  // NOTE: optional chaining
                   isProductInFavourites={favouriteRecord?.productId}
                   key={product.id}
                 />

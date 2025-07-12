@@ -15,8 +15,8 @@ export const Layout = () => {
 
   return (
     <>
-      <MainContent>
-        <CurrencyContext value={[currency, setCurrency]}>
+      <CurrencyContext value={[currency, setCurrency]}>
+        <MainContent>
           <TopBar>
             <MainMenu />
             <Logo />
@@ -27,8 +27,8 @@ export const Layout = () => {
           </TopBar>
           <CategoriesMenu />
           <Outlet />
-        </CurrencyContext>
-      </MainContent>
+        </MainContent>
+      </CurrencyContext>
       <Footer />
     </>
   );

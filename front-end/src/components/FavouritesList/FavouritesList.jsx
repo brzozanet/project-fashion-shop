@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import { FavouriteProduct } from "../FavouriteProduct/FavouriteProduct";
 import css from "./FavouritesList.module.css";
+import { CurrencyContext } from "../../contexts/currencyContext";
 
 export const FavouritesList = ({
   data: [userFavouritesProducts, userFavouritesIds],
 }) => {
+  const [currency] = useContext(CurrencyContext);
+
   return (
     <>
       <div className={css.favouritesList}>
@@ -14,13 +18,13 @@ export const FavouritesList = ({
           );
           return (
             <FavouriteProduct
-              // NOTE: optional chaining
-              favouriteId={favouriteRecord?.id}
               image={product.photos[0]}
               brand={product.brand}
               name={product.name}
+              // NOTE: optional chaining
+              favouriteId={favouriteRecord?.id}
               description={product.description}
-              price={product.pricePLN}
+              price={product[`price${currency}`]}
               key={product.id}
               // key={nanoid()}
             />
