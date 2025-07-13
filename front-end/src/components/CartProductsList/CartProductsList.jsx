@@ -1,4 +1,3 @@
-import { nanoid } from "nanoid";
 import { CartProduct } from "../CartProduct/CartProduct";
 import { useContext } from "react";
 import { CurrencyContext } from "../../contexts/currencyContext";
@@ -21,7 +20,7 @@ export const CartProductsList = () => {
               description={product.description}
               // NOTE: dynamic access
               price={product[`price${currency}`]}
-              key={nanoid()}
+              key={product.id}
             />
           );
         })}

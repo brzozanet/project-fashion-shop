@@ -25,13 +25,7 @@ export const ProductDetails = () => {
             />
             <div className={css.productDetailContainer}>
               <Photos photos={product.photos} name={product.name} />
-              <Detail
-                brand={product.brand}
-                name={product.name}
-                price={product.pricePLN}
-                description={product.description}
-                maintenanceInfo={product.maintenanceInfo}
-              />
+              <Detail product={product} />
             </div>
           </div>
         </FlexContainer>

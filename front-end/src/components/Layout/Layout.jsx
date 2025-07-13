@@ -14,6 +14,7 @@ import { cartProductsMockup } from "../../mockups/cartProductsMockup";
 
 export const Layout = () => {
   const [currency, setCurrency] = useCurrency();
+  //TODO: add localStorage custom hook
 
   return (
     <>
