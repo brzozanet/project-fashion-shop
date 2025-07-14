@@ -1,18 +1,13 @@
 import { useContext } from "react";
 import { Accordion } from "../Accordion/Accordion";
 import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
-import css from "./Detail.module.css";
 import { CartContext } from "../../contexts/CartContext";
+import css from "./Detail.module.css";
 
 export const Detail = ({ product }) => {
-  console.log(product);
-
-  const [shoppingCart, setShoppingCart] = useContext(CartContext);
-
-  console.log(shoppingCart);
+  const [, setShoppingCart] = useContext(CartContext);
 
   const handleAddToCart = () => {
-    console.log("click button");
     setShoppingCart((prevstate) => [...prevstate, product]);
   };
 
