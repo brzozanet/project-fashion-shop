@@ -10,16 +10,19 @@ import { TopBar } from "../TopBar/TopBar";
 import { CurrencyContext } from "../../contexts/currencyContext";
 import { CartContext } from "../../contexts/CartContext";
 import { useCurrency } from "../../hooks/useCurrency";
-import { cartProductsMockup } from "../../mockups/cartProductsMockup";
+import { useCart } from "../../hooks/useCart";
+// import { cartProductsMockup } from "../../mockups/cartProductsMockup";
 
 export const Layout = () => {
   const [currency, setCurrency] = useCurrency();
-  //TODO: add localStorage custom hook
+  const [shoppingCart, setShoppingCart] = useCart();
+  console.log(shoppingCart);
 
   return (
     <>
       <CurrencyContext value={[currency, setCurrency]}>
-        <CartContext value={[cartProductsMockup]}>
+        <CartContext value={[shoppingCart, setShoppingCart]}>
+          {/* <CartContext value={[cartProductsMockup]}> */}
           <MainContent>
             <TopBar>
               <MainMenu />
