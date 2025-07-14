@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const useCart = () => {
   // Inicjalizacja z localStorage
@@ -11,6 +11,15 @@ export const useCart = () => {
       return [];
     }
   });
+
+  // Zapisywanie przy każdej zmianie
+  useEffect(() => {
+    try {
+      localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+    } catch (error) {
+      console.error("Błąd podczas zapisywania koszyka", error);
+    }
+  }, [shoppingCart]);
 
   return [shoppingCart, setShoppingCart];
 };
