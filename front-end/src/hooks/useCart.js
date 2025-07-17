@@ -7,7 +7,7 @@ export const useCart = () => {
       const savedShoppingCart = localStorage.getItem("shoppingCart");
       return savedShoppingCart ? JSON.parse(savedShoppingCart) : [];
     } catch (error) {
-      console.error("Błąd podczas pobierania koszyka", error);
+      console.error("Błąd podczas pobierania koszykaaaa", error);
       return [];
     }
   });
