@@ -1,6 +1,6 @@
 import { useFetcher } from "react-router-dom";
 import { useContext } from "react";
-import { CurrencyContext } from "../../contexts/currencyContext";
+import { CurrencyContext } from "../../contexts/CurrencyContext";
 import ICON_DELETE from "../../assets/icon_delete.svg";
 import ICON_CART from "../../assets/icon_cart.svg";
 import css from "./FavouriteProduct.module.css";

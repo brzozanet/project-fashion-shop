@@ -1,5 +1,5 @@
 import { Link, useParams, useFetcher } from "react-router-dom";
-import { CurrencyContext } from "../../contexts/currencyContext";
+import { CurrencyContext } from "../../contexts/CurrencyContext";
 import { useContext } from "react";
 import css from "./Product.module.css";
 

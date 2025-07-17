@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { FavouriteProduct } from "../FavouriteProduct/FavouriteProduct";
 import css from "./FavouritesList.module.css";
-import { CurrencyContext } from "../../contexts/currencyContext";
+import { CurrencyContext } from "../../contexts/CurrencyContext";
 
 export const FavouritesList = ({
   data: [userFavouritesProducts, userFavouritesIds],

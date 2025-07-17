@@ -2,7 +2,7 @@ import { nanoid } from "nanoid";
 import { CURRENCIES } from "../../constants/curriencies";
 import css from "./CurrencySelector.module.css";
 import { useContext } from "react";
-import { CurrencyContext } from "../../contexts/currencyContext";
+import { CurrencyContext } from "../../contexts/CurrencyContext";
 
 export const CurrencySelector = () => {
   const [currency, setCurrency] = useContext(CurrencyContext);

@@ -2,7 +2,7 @@ import { CenteredContent } from "../CenteredContent/CenteredContent";
 import { Product } from "../Product/Product";
 import { PageTitle } from "../PageTitle/PageTitle";
 import { useContext } from "react";
-import { CurrencyContext } from "../../contexts/currencyContext";
+import { CurrencyContext } from "../../contexts/CurrencyContext";
 import css from "./Bestsellers.module.css";
 
 export const Bestsellers = ({ bestsellersData, favouritesData }) => {

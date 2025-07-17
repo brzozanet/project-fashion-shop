@@ -1,6 +1,6 @@
 import { CartProduct } from "../CartProduct/CartProduct";
 import { useContext } from "react";
-import { CurrencyContext } from "../../contexts/currencyContext";
+import { CurrencyContext } from "../../contexts/CurrencyContext";
 import { CartContext } from "../../contexts/CartContext";
 import css from "./CartProductsList.module.css";
 

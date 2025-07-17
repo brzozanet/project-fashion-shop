@@ -1,6 +1,6 @@
 import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
 import { useContext } from "react";
-import { CurrencyContext } from "../../contexts/currencyContext";
+import { CurrencyContext } from "../../contexts/CurrencyContext";
 import { CartContext } from "../../contexts/CartContext";
 import { SHIPPING_COST, SHIPPING_FREE } from "../../constants/costs";
 import ICON_SHIPPING from "../../assets/icon_shipping.svg";

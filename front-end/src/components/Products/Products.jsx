@@ -2,7 +2,7 @@ import { Product } from "../Product/Product";
 import { CATEGORIES } from "../../constants/categories";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import { CurrencyContext } from "../../contexts/currencyContext";
+import { CurrencyContext } from "../../contexts/CurrencyContext";
 import css from "./Products.module.css";
 
 export const Products = ({ products, favourites }) => {
