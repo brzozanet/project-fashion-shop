@@ -19,7 +19,7 @@ export const Detail = ({ product }) => {
         <h3 className={css.detailBrand}>{product.brand}</h3>
         <p className={css.detailName}>{product.name}</p>
         <p className={css.detailPrice}>
-          {product.price} {currency}
+          {product[`price${currency}`]} {currency}
         </p>
         <div className={css.detailBtnWrapper}>
           <FullWidthButton onClick={handleAddToCart}>
