@@ -41,32 +41,32 @@ Aplikacja składa się z dwóch części:
 
 ```
 react-shop-online/
-├── front-end/                    # Aplikacja React
+├── front-end/                      # Aplikacja React
 │   ├── src/
-│   │   ├── components/          # Komponenty React
-│   │   │   ├── Bestsellers/     # Sekcja bestsellerów
-│   │   │   ├── Cart*/           # Komponenty koszyka
-│   │   │   ├── Categories*/     # Menu kategorii
-│   │   │   ├── Currency*/       # Selektor walut
-│   │   │   ├── Detail/          # Szczegóły produktu
-│   │   │   ├── Favourite*/      # Komponenty ulubionych
-│   │   │   ├── Hero/            # Sekcja hero
-│   │   │   ├── Layout/          # Layout aplikacji
-│   │   │   ├── Product*/        # Komponenty produktów
+│   │   ├── components/             # Komponenty React
+│   │   │   ├── Bestsellers/        # Sekcja bestsellerów
+│   │   │   ├── Cart*/              # Komponenty koszyka
+│   │   │   ├── Categories*/        # Menu kategorii
+│   │   │   ├── Currency*/          # Selektor walut
+│   │   │   ├── Detail/             # Szczegóły produktu
+│   │   │   ├── Favourite*/         # Komponenty ulubionych
+│   │   │   ├── Hero/               # Sekcja hero
+│   │   │   ├── Layout/             # Layout aplikacji
+│   │   │   ├── Product*/           # Komponenty produktów
 │   │   │   └── ...
-│   │   ├── contexts/            # React Context
-│   │   │   ├── CartContext.js   # Kontekst koszyka
-│   │   │   └── CurrencyContext.js # Kontekst waluty
-│   │   ├── hooks/               # Custom hooks
-│   │   ├── api/                 # Funkcje API
-│   │   ├── constants/           # Stałe aplikacji
-│   │   ├── views/               # Strony aplikacji
-│   │   └── styles/              # Globalne style
-│   ├── public/                  # Pliki statyczne
+│   │   ├── contexts/               # React Context
+│   │   │   ├── CartContext.js      # Kontekst koszyka
+│   │   │   └── CurrencyContext.js  # Kontekst waluty
+│   │   ├── hooks/                  # Custom hooks
+│   │   ├── api/                    # Funkcje API
+│   │   ├── constants/              # Stałe aplikacji
+│   │   ├── views/                  # Strony aplikacji
+│   │   └── styles/                 # Globalne style
+│   ├── public/                     # Pliki statyczne
 │   └── package.json
-├── back-end/                    # JSON Server
-│   ├── db.json                  # Baza danych produktów
-│   ├── public/product-photos/   # Zdjęcia produktów
+├── back-end/                       # JSON Server
+│   ├── db.json                     # Baza danych produktów
+│   ├── public/product-photos/      # Zdjęcia produktów
 │   └── package.json
 └── README.md
 ```
