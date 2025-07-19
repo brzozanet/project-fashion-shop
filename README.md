@@ -104,6 +104,7 @@ react-shop-online/
    ```
 
    Frontend będzie dostępny pod adresem: [http://localhost:5173](http://localhost:5173)
+
    Backend będzie dostępny pod adresem: [http://localhost:3000](http://localhost:3000)
 
 ## 🌐 API Endpoints
@@ -138,4 +139,4 @@ Backend udostępnia następujące endpointy:
 
 <br>
 
-![Screenshot App](https://raw.githubusercontent.com/brzozanet/react-shop-online/main/src/images/gh-cover-react-shop-online.jpg)
+![Screenshot App](https://raw.githubusercontent.com/brzozanet/react-shop-online/main/front-end/src/images/gh-cover-react-shop-online.jpg)
