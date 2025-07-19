@@ -135,3 +135,7 @@ Backend udostępnia następujące endpointy:
 - Dane koszyka są przechowywane lokalnie w localStorage
 - Zdjęcia produktów znajdują się w folderze `back-end/public/product-photos/`
 - Aplikacja wspiera waluty: PLN, EUR
+
+<br>
+
+![Screenshot App](https://raw.githubusercontent.com/brzozanet/react-shop-online/main/src/images/gh-cover-react-shop-online.jpg)
