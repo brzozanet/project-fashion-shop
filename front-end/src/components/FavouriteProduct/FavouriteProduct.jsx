@@ -4,8 +4,10 @@ import { CurrencyContext } from "../../contexts/CurrencyContext";
 import ICON_DELETE from "../../assets/icon_delete.svg";
 import ICON_CART from "../../assets/icon_cart.svg";
 import css from "./FavouriteProduct.module.css";
+import { CartContext } from "../../contexts/CartContext";
 
 export const FavouriteProduct = ({
+  id,
   favouriteId,
   image,
   brand,
@@ -16,6 +18,7 @@ export const FavouriteProduct = ({
   const fetcher = useFetcher();
   const { Form } = fetcher;
   const [currency] = useContext(CurrencyContext);
+  const [shoppingCart, setShoppingCart] = useContext(CartContext);
 
   const truncateTextSmart = (text, maxLength) => {
     if (text.length <= maxLength) return text;
@@ -26,6 +29,13 @@ export const FavouriteProduct = ({
     return lastSpace === -1
       ? truncated + "..."
       : truncated.slice(0, lastSpace) + "...";
+  };
+
+  const productAlreadyAdded = shoppingCart.find((product) => product.id === id);
+  console.log(productAlreadyAdded);
+
+  const handleAddToCartButton = (id) => {
+    setShoppingCart((prevState) => [...prevState, product(id)]);
   };
 
   return (
@@ -49,6 +59,7 @@ export const FavouriteProduct = ({
               </h3>
               <p>{truncateTextSmart(description, 100)}</p>
             </div>
+            {id}
             <div className={css.favouritesButtons}>
               <Form
                 method="DELETE"
@@ -61,7 +72,10 @@ export const FavouriteProduct = ({
                   </span>
                 </button>
               </Form>
-              <button className={css.favouriteButtonAction}>
+              <button
+                className={css.favouriteButtonAction}
+                onClick={() => handleAddToCartButton(id)}
+              >
                 <img src={ICON_CART} width="14" height="14" />
                 <span className={css.favouriteIconText}>Dodaj do koszyka</span>
               </button>

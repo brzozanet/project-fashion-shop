@@ -15,7 +15,7 @@ export const Detail = ({ product }) => {
     (product) => product.id === Number(params.id)
   );
 
-  const handleAddToCart = () => {
+  const handleAddToCartButton = () => {
     setShoppingCart((prevstate) => [...prevstate, product]);
   };
 
@@ -29,7 +29,7 @@ export const Detail = ({ product }) => {
         </p>
         <div className={css.detailBtnWrapper}>
           {!productAlreadyAdded ? (
-            <FullWidthButton onClick={handleAddToCart}>
+            <FullWidthButton onClick={handleAddToCartButton}>
               Dodaj do koszyka
             </FullWidthButton>
           ) : (

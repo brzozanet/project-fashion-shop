@@ -47,7 +47,10 @@ export const CartProduct = ({ id, brand, name, image, description, price }) => {
               </h3>
               <p>{truncateTextSmart(description, 100)}</p>
             </div>
-            <button onClick={() => handleDeleteFromCartButton(id)}>
+            <button
+              className={css.cartButtonAction}
+              onClick={() => handleDeleteFromCartButton(id)}
+            >
               <img src={ICON_DELETE} width="14" height="14" />
               <span className={css.cartProductIconText}>Usuń z koszyka</span>
             </button>
