@@ -3,11 +3,17 @@ import { Accordion } from "../Accordion/Accordion";
 import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
 import { CartContext } from "../../contexts/CartContext";
 import { CurrencyContext } from "../../contexts/CurrencyContext";
+import { useParams } from "react-router-dom";
 import css from "./Detail.module.css";
 
 export const Detail = ({ product }) => {
+  const params = useParams();
   const [currency] = useContext(CurrencyContext);
-  const [, setShoppingCart] = useContext(CartContext);
+  const [shoppingCart, setShoppingCart] = useContext(CartContext);
+
+  const productAlreadyAdded = shoppingCart.find(
+    (product) => product.id === Number(params.id)
+  );
 
   const handleAddToCart = () => {
     setShoppingCart((prevstate) => [...prevstate, product]);
@@ -22,9 +28,15 @@ export const Detail = ({ product }) => {
           {product[`price${currency}`]} {currency}
         </p>
         <div className={css.detailBtnWrapper}>
-          <FullWidthButton onClick={handleAddToCart}>
-            Dodaj do koszyka
-          </FullWidthButton>
+          {!productAlreadyAdded ? (
+            <FullWidthButton onClick={handleAddToCart}>
+              Dodaj do koszyka
+            </FullWidthButton>
+          ) : (
+            <FullWidthButton disabled={true}>
+              Produkt jest już w koszyku
+            </FullWidthButton>
+          )}
         </div>
         <p className={css.detailShipping}>Dostawa do 24h</p>
         <p className={css.detailReturn}>Zwrot do 30 dni</p>

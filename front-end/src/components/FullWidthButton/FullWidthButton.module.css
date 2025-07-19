@@ -9,3 +9,7 @@
   padding: 1rem;
   cursor: pointer;
 }
+
+.disabled {
+  cursor: not-allowed;
+}

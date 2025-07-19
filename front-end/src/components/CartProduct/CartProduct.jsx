@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useContext } from "react";
 import { CurrencyContext } from "../../contexts/CurrencyContext";
+import { CartContext } from "../../contexts/CartContext";
 import ICON_DELETE from "../../assets/icon_delete.svg";
 import css from "./CartProduct.module.css";
 
 export const CartProduct = ({ brand, name, image, description, price }) => {
+  const params = useParams();
   const [currency] = useContext(CurrencyContext);
+  const [shoppingCart, setShoppingCart] = useContext(CartContext);
 
   const truncateTextSmart = (text, maxLength) => {
     if (text.length <= maxLength) return text;
@@ -17,6 +20,15 @@ export const CartProduct = ({ brand, name, image, description, price }) => {
       ? truncated + "..."
       : truncated.slice(0, lastSpace) + "...";
   };
+
+  // console.log(shoppingCart);
+  // console.log(params);
+
+  const filteredShoppingCart = shoppingCart.filter(
+    (product) => product.id !== params.id
+  );
+
+  // console.log(filteredShoppingCart);
 
   return (
     <>
