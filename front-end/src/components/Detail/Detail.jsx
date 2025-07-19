@@ -11,7 +11,7 @@ export const Detail = ({ product }) => {
   const [currency] = useContext(CurrencyContext);
   const [shoppingCart, setShoppingCart] = useContext(CartContext);
 
-  const productAlreadyAdded = shoppingCart.find(
+  const productAlreadyAddedToCart = shoppingCart.find(
     (product) => product.id === Number(params.id)
   );
 
@@ -28,7 +28,7 @@ export const Detail = ({ product }) => {
           {product[`price${currency}`]} {currency}
         </p>
         <div className={css.detailBtnWrapper}>
-          {!productAlreadyAdded ? (
+          {!productAlreadyAddedToCart ? (
             <FullWidthButton onClick={handleAddToCartButton}>
               Dodaj do koszyka
             </FullWidthButton>

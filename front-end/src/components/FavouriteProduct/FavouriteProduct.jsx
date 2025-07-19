@@ -1,20 +1,12 @@
 import { useFetcher } from "react-router-dom";
 import { useContext } from "react";
 import { CurrencyContext } from "../../contexts/CurrencyContext";
+import { CartContext } from "../../contexts/CartContext";
 import ICON_DELETE from "../../assets/icon_delete.svg";
 import ICON_CART from "../../assets/icon_cart.svg";
 import css from "./FavouriteProduct.module.css";
-import { CartContext } from "../../contexts/CartContext";
 
-export const FavouriteProduct = ({
-  id,
-  favouriteId,
-  image,
-  brand,
-  name,
-  description,
-  price,
-}) => {
+export const FavouriteProduct = ({ product, favouriteId }) => {
   const fetcher = useFetcher();
   const { Form } = fetcher;
   const [currency] = useContext(CurrencyContext);
@@ -31,11 +23,13 @@ export const FavouriteProduct = ({
       : truncated.slice(0, lastSpace) + "...";
   };
 
-  const productAlreadyAdded = shoppingCart.find((product) => product.id === id);
-  console.log(productAlreadyAdded);
+  const productAlreadyAddedToCart = shoppingCart.find(
+    (productFromCart) => productFromCart.id === product.id
+  );
 
-  const handleAddToCartButton = (id) => {
-    setShoppingCart((prevState) => [...prevState, product(id)]);
+  const handleAddToCartButton = () => {
+    console.log(product);
+    setShoppingCart((prevState) => [...prevState, product]);
   };
 
   return (
@@ -44,9 +38,9 @@ export const FavouriteProduct = ({
         <div className={css.favouriteBox}>
           <div className={css.favouritePhotoContainer}>
             <img
-              src={image}
-              alt={name}
-              title={name}
+              src={product.photos[0]}
+              alt={product.name}
+              title={product.name}
               className={css.favouritePhotoImg}
             />
           </div>
@@ -55,11 +49,10 @@ export const FavouriteProduct = ({
           <div className={css.favouriteSubBox}>
             <div className={css.favouriteSubBoxText}>
               <h3 className={css.favouriteTitle}>
-                {brand} | {name}
+                {product.brand} | {product.name}
               </h3>
-              <p>{truncateTextSmart(description, 100)}</p>
+              <p>{truncateTextSmart(product.description, 100)}</p>
             </div>
-            {id}
             <div className={css.favouritesButtons}>
               <Form
                 method="DELETE"
@@ -74,17 +67,25 @@ export const FavouriteProduct = ({
               </Form>
               <button
                 className={css.favouriteButtonAction}
-                onClick={() => handleAddToCartButton(id)}
+                onClick={() => handleAddToCartButton(product.id)}
               >
                 <img src={ICON_CART} width="14" height="14" />
-                <span className={css.favouriteIconText}>Dodaj do koszyka</span>
+                {!productAlreadyAddedToCart ? (
+                  <span className={css.favouriteIconText}>
+                    Dodaj do koszyka
+                  </span>
+                ) : (
+                  <span className={`${css.favouriteIconText} ${css.disabled}`}>
+                    Produkt już jest w koszyku
+                  </span>
+                )}
               </button>
             </div>
           </div>
         </div>
         <div className={css.favouriteBox}>
           <p className={css.favouritePrice}>
-            {price} {currency}
+            {product[`price${currency}`]} {currency}
           </p>
         </div>
       </div>

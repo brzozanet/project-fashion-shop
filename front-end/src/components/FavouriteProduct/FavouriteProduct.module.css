@@ -60,3 +60,7 @@
   border: none;
   background: none;
 }
+
+.disabled {
+  cursor: not-allowed;
+}
