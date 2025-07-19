@@ -1,12 +1,11 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CurrencyContext } from "../../contexts/CurrencyContext";
 import { CartContext } from "../../contexts/CartContext";
 import ICON_DELETE from "../../assets/icon_delete.svg";
 import css from "./CartProduct.module.css";
 
-export const CartProduct = ({ brand, name, image, description, price }) => {
-  const params = useParams();
+export const CartProduct = ({ id, brand, name, image, description, price }) => {
   const [currency] = useContext(CurrencyContext);
   const [shoppingCart, setShoppingCart] = useContext(CartContext);
 
@@ -21,14 +20,12 @@ export const CartProduct = ({ brand, name, image, description, price }) => {
       : truncated.slice(0, lastSpace) + "...";
   };
 
-  // console.log(shoppingCart);
-  // console.log(params);
-
-  const filteredShoppingCart = shoppingCart.filter(
-    (product) => product.id !== params.id
-  );
-
-  // console.log(filteredShoppingCart);
+  const handleDeleteFromCartButton = (id) => {
+    const filteredShoppingCart = shoppingCart.filter(
+      (product) => product.id !== id
+    );
+    setShoppingCart(filteredShoppingCart);
+  };
 
   return (
     <>
@@ -51,10 +48,10 @@ export const CartProduct = ({ brand, name, image, description, price }) => {
               </h3>
               <p>{truncateTextSmart(description, 100)}</p>
             </div>
-            <Link to="">
+            <button onClick={() => handleDeleteFromCartButton(id)}>
               <img src={ICON_DELETE} width="14" height="14" />
               <span className={css.cartProductIconText}>Usuń z koszyka</span>
-            </Link>
+            </button>
           </div>
         </div>
         <div className={css.cartProductBox}>

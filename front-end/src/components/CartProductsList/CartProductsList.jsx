@@ -15,6 +15,7 @@ export const CartProductsList = () => {
         {shoppingCart.map((product) => {
           return (
             <CartProduct
+              id={product.id}
               brand={product.brand}
               name={product.name}
               image={product.photos[0]}
