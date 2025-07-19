@@ -10,7 +10,7 @@ export const Favourites = () => {
   return (
     <>
       <CenteredContent>
-        {userFavouritesProducts.length !== 0 ? (
+        {userFavouritesProducts.length ? (
           <>
             <PageTitle>
               Ulubione {`(${userFavouritesProducts.length})`}

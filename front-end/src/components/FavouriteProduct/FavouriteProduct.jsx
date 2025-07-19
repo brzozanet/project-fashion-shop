@@ -28,7 +28,6 @@ export const FavouriteProduct = ({ product, favouriteId }) => {
   );
 
   const handleAddToCartButton = () => {
-    console.log(product);
     setShoppingCart((prevState) => [...prevState, product]);
   };
 

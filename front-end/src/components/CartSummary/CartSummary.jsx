@@ -22,6 +22,14 @@ export const CartSummary = () => {
     shippingCost = SHIPPING_COST[currency];
   }
 
+  let deliveryCostCalculation;
+
+  if (productValue > SHIPPING_FREE[currency]) {
+    deliveryCostCalculation = 0;
+  } else {
+    deliveryCostCalculation = SHIPPING_COST[currency];
+  }
+
   const toBePaid = productValue + shippingCost;
 
   return (
@@ -38,10 +46,7 @@ export const CartSummary = () => {
           <div className={css.cartSummaryRow}>
             <p>Koszt dostawy:</p>
             <p>
-              {productValue > SHIPPING_FREE[currency]
-                ? 0
-                : SHIPPING_COST[currency]}{" "}
-              {currency}
+              {productValue ? deliveryCostCalculation : 0} {currency}
             </p>
           </div>
           <div className={css.cartSummaryRow}>
@@ -50,11 +55,11 @@ export const CartSummary = () => {
             </p>
             <p>
               <strong>
-                {toBePaid} {currency}
+                {productValue ? toBePaid : 0} {currency}
               </strong>
             </p>
           </div>
-          <FullWidthButton>Idź do kasy</FullWidthButton>
+          <FullWidthButton disabled={true}>Idź do kasy</FullWidthButton>
         </div>
         <div className={css.freeShipping}>
           <img
