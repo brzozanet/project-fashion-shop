@@ -103,6 +103,8 @@ react-shop-online/
    npm run dev
    ```
 
+   ✅ Oba serwery (frontendowy i backendowy) uruchomią się jednocześnie!
+
    Frontend będzie dostępny pod adresem: [http://localhost:5173](http://localhost:5173)
 
    Backend będzie dostępny pod adresem: [http://localhost:3000](http://localhost:3000)
