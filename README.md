@@ -1,8 +1,8 @@
-# 🛒 React Shop Online
+# 🛒 Fashion contemporary shop
 
 ### Projekt sklepu internetowego z koszykiem zakupowym
 
-Aplikacja React Shop Online to nowoczesny sklep internetowy umożliwiający przeglądanie produktów, dodawanie ich do ulubionych oraz zarządzanie koszykiem zakupowym. Projekt obejmuje frontend w React oraz backend z JSON Server do obsługi danych produktów.
+Aplikacja Fashion contemporary shop to nowoczesny sklep internetowy umożliwiający przeglądanie produktów, dodawanie ich do ulubionych oraz zarządzanie koszykiem zakupowym. Projekt obejmuje frontend w React oraz backend z JSON Server do obsługi danych produktów.
 
 ## 🌐 Demo
 
@@ -40,7 +40,7 @@ Aplikacja składa się z dwóch części:
 ## 📂 Struktura aplikacji
 
 ```
-react-shop-online/
+project-fashion-shop/
 ├── front-end/                      # Aplikacja React
 │   ├── src/
 │   │   ├── components/             # Komponenty React
@@ -92,7 +92,7 @@ react-shop-online/
 1. Sklonuj repozytorium:
 
    ```bash
-   git clone https://github.com/brzozanet/react-shop-online.git
+   git clone https://github.com/brzozanet/project-fashion-shop.git
    cd react-shop-online
    ```
 
@@ -141,4 +141,4 @@ Backend udostępnia następujące endpointy:
 
 <br>
 
-![Screenshot App](https://raw.githubusercontent.com/brzozanet/react-shop-online/main/front-end/src/images/gh-cover-react-shop-online.jpg)
+![Screenshot App](https://raw.githubusercontent.com/brzozanet/project-fashion-shop/main/front-end/src/images/gh-cover-react-shop-online.jpg)
