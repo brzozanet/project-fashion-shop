@@ -5,7 +5,7 @@ import ICON_HEART from "../../assets/icon_heart.svg";
 import ICON_BAG from "../../assets/icon_cart.svg";
 import css from "./IconMenu.module.css";
 
-export const IconMenu = () => {
+export function IconMenu() {
   const [shoppingCart] = useContext(CartContext);
 
   return (
@@ -25,4 +25,4 @@ export const IconMenu = () => {
       </ul>
     </>
   );
-};
+}

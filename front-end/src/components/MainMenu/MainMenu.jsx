@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { nanoid } from "nanoid";
 import css from "./MainMenu.module.css";
 
-export const MainMenu = () => {
+export function MainMenu() {
   return (
     <>
       <ul className={css.mainMenuList}>
@@ -17,4 +17,4 @@ export const MainMenu = () => {
       </ul>
     </>
   );
-};
+}

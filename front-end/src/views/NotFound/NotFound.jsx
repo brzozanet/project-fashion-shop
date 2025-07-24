@@ -5,7 +5,7 @@ import { PageTitle } from "../../components/PageTitle/PageTitle";
 import IMG_ERROR from "../../assets/error.png";
 import css from "./NotFound.module.css";
 
-export const NotFound = () => {
+export function NotFound() {
   // const navigate = useNavigate();
   // const handleButtonClick = () => {
   //   navigate("/");
@@ -28,4 +28,4 @@ export const NotFound = () => {
       </CenteredContent>
     </>
   );
-};
+}

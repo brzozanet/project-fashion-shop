@@ -6,7 +6,7 @@ import { FlexContainer } from "../../components/FlexContainer/FlexContainer";
 import { PageTitle } from "../../components/PageTitle/PageTitle";
 import { CartContext } from "../../contexts/CartContext";
 
-export const Cart = () => {
+export function Cart() {
   const [shoppingCart] = useContext(CartContext);
 
   return (
@@ -25,4 +25,4 @@ export const Cart = () => {
       </CenteredContent>
     </>
   );
-};
+}

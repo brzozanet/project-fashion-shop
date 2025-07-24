@@ -3,7 +3,7 @@ import { NavLink, useParams } from "react-router-dom";
 import { nanoid } from "nanoid";
 import css from "./CategoriesMenu.module.css";
 
-export const CategoriesMenu = () => {
+export function CategoriesMenu() {
   const params = useParams();
 
   return (
@@ -23,4 +23,4 @@ export const CategoriesMenu = () => {
       </div>
     </>
   );
-};
+}

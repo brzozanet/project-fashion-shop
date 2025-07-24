@@ -1,9 +1,9 @@
 import { FavouriteProduct } from "../FavouriteProduct/FavouriteProduct";
 import css from "./FavouritesList.module.css";
 
-export const FavouritesList = ({
+export function FavouritesList({
   data: [userFavouritesProducts, userFavouritesIds],
-}) => {
+}) {
   return (
     <>
       <div className={css.favouritesList}>
@@ -25,4 +25,4 @@ export const FavouritesList = ({
       </div>
     </>
   );
-};
+}

@@ -7,7 +7,7 @@ import { Detail } from "../../components/Detail/Detail";
 import { useLoaderData } from "react-router-dom";
 import css from "./ProductDetails.module.css";
 
-export const ProductDetails = () => {
+export function ProductDetails() {
   const product = useLoaderData();
 
   return (
@@ -32,4 +32,4 @@ export const ProductDetails = () => {
       </CenteredContent>
     </>
   );
-};
+}

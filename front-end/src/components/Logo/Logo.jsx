@@ -2,7 +2,7 @@ import css from "./Logo.module.css";
 import LOGO_SHOP from "../../assets/logo_fashion_shop.png";
 import { Link } from "react-router-dom";
 
-export const Logo = () => {
+export function Logo() {
   return (
     <>
       <div className={css.logo}>
@@ -13,4 +13,4 @@ export const Logo = () => {
       {/* <h1 className={css.logoText}>React Shop Online®</h1> */}
     </>
   );
-};
+}

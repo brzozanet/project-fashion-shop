@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { nanoid } from "nanoid";
 import css from "./Pagination.module.css";
 
-export const Pagination = () => {
+export function Pagination() {
   const numberOfPagesMockup = 5;
   const pagination = Array(numberOfPagesMockup).fill(null);
 
@@ -21,4 +21,4 @@ export const Pagination = () => {
       </ul>
     </>
   );
-};
+}

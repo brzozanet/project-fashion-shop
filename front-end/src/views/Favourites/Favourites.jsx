@@ -3,7 +3,7 @@ import { CenteredContent } from "../../components/CenteredContent/CenteredConten
 import { FavouritesList } from "../../components/FavouritesList/FavouritesList";
 import { PageTitle } from "../../components/PageTitle/PageTitle";
 
-export const Favourites = () => {
+export function Favourites() {
   const data = useLoaderData();
   const [userFavouritesProducts] = data;
 
@@ -23,4 +23,4 @@ export const Favourites = () => {
       </CenteredContent>
     </>
   );
-};
+}

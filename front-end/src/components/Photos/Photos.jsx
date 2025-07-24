@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 import { useState } from "react";
 import css from "./Photos.module.css";
 
-export const Photos = ({ photos, name }) => {
+export function Photos({ photos, name }) {
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
 
   return (
@@ -42,4 +42,4 @@ export const Photos = ({ photos, name }) => {
       </div>
     </>
   );
-};
+}

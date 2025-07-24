@@ -2,7 +2,7 @@ import { CenteredContent } from "../CenteredContent/CenteredContent";
 import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
 import css from "./Hero.module.css";
 
-export const Hero = ({ imageUrl }) => {
+export function Hero({ imageUrl }) {
   return (
     <>
       <div className={css.hero} style={{ backgroundImage: `url(${imageUrl})` }}>
@@ -16,4 +16,4 @@ export const Hero = ({ imageUrl }) => {
       </div>
     </>
   );
-};
+}

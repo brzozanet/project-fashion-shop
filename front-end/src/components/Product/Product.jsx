@@ -3,7 +3,7 @@ import { CurrencyContext } from "../../contexts/CurrencyContext";
 import { useContext } from "react";
 import css from "./Product.module.css";
 
-export const Product = ({
+export function Product({
   id,
   name,
   price,
@@ -11,7 +11,7 @@ export const Product = ({
   category,
   subcategory,
   isProductInFavourites,
-}) => {
+}) {
   const params = useParams();
   const fetcher = useFetcher();
   const [currency] = useContext(CurrencyContext);
@@ -49,4 +49,4 @@ export const Product = ({
       </Link>
     </div>
   );
-};
+}

@@ -1,9 +1,9 @@
 import css from "./CenteredContent.module.css";
 
-export const CenteredContent = ({ children }) => {
+export function CenteredContent({ children }) {
   return (
     <>
       <div className={css.centeredContent}>{children}</div>
     </>
   );
-};
+}

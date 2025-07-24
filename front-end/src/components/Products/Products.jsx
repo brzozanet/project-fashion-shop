@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { CurrencyContext } from "../../contexts/CurrencyContext";
 import css from "./Products.module.css";
 
-export const Products = ({ products, favourites }) => {
+export function Products({ products, favourites }) {
   const params = useParams();
   const [currency] = useContext(CurrencyContext);
 
@@ -53,4 +53,4 @@ export const Products = ({ products, favourites }) => {
       </div>
     </>
   );
-};
+}

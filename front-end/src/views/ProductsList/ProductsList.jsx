@@ -6,7 +6,7 @@ import { Products } from "../../components/Products/Products";
 import { Pagination } from "../../components/Pagination/Pagination";
 import { useLoaderData } from "react-router-dom";
 
-export const ProductsList = () => {
+export function ProductsList() {
   const [products, favourites] = useLoaderData();
 
   return (
@@ -23,4 +23,4 @@ export const ProductsList = () => {
       </CenteredContent>
     </>
   );
-};
+}

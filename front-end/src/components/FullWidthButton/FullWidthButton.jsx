@@ -1,6 +1,6 @@
 import css from "./FullWidthButton.module.css";
 
-export const FullWidthButton = ({ children, onClick, disabled, ...props }) => {
+export function FullWidthButton({ children, onClick, disabled, ...props }) {
   return (
     <>
       <button
@@ -12,4 +12,4 @@ export const FullWidthButton = ({ children, onClick, disabled, ...props }) => {
       </button>
     </>
   );
-};
+}

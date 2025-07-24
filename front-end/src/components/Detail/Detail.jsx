@@ -6,7 +6,7 @@ import { CurrencyContext } from "../../contexts/CurrencyContext";
 import { useParams } from "react-router-dom";
 import css from "./Detail.module.css";
 
-export const Detail = ({ product }) => {
+export function Detail({ product }) {
   const params = useParams();
   const [currency] = useContext(CurrencyContext);
   const [shoppingCart, setShoppingCart] = useContext(CartContext);
@@ -47,4 +47,4 @@ export const Detail = ({ product }) => {
       </div>
     </>
   );
-};
+}

@@ -12,7 +12,7 @@ import { CartContext } from "../../contexts/CartContext";
 import { useCurrency } from "../../hooks/useCurrency";
 import { useCart } from "../../hooks/useCart";
 
-export const Layout = () => {
+export function Layout() {
   const [currency, setCurrency] = useCurrency();
   const [shoppingCart, setShoppingCart] = useCart();
 
@@ -37,4 +37,4 @@ export const Layout = () => {
       <Footer />
     </>
   );
-};
+}

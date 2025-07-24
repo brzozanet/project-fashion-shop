@@ -5,7 +5,7 @@ import { CATEGORIES } from "../../constants/categories";
 import ICON_ARROW from "../../assets/icon_arrow.svg";
 import css from "./Breadcrumbs.module.css";
 
-export const Breadcrumbs = ({ name }) => {
+export function Breadcrumbs({ name }) {
   const params = useParams();
 
   const genderText = GENDERS_TEXT_MAPPING.get(params.gender);
@@ -56,4 +56,4 @@ export const Breadcrumbs = ({ name }) => {
       </ul>
     </>
   );
-};
+}

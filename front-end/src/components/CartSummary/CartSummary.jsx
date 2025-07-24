@@ -6,7 +6,7 @@ import { SHIPPING_COST, SHIPPING_FREE } from "../../constants/costs";
 import ICON_SHIPPING from "../../assets/icon_shipping.svg";
 import css from "./CartSummary.module.css";
 
-export const CartSummary = () => {
+export function CartSummary() {
   const [currency] = useContext(CurrencyContext);
   const [shoppingCart] = useContext(CartContext);
 
@@ -77,4 +77,4 @@ export const CartSummary = () => {
       </div>
     </>
   );
-};
+}

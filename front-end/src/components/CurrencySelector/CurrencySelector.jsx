@@ -4,7 +4,7 @@ import css from "./CurrencySelector.module.css";
 import { useContext } from "react";
 import { CurrencyContext } from "../../contexts/CurrencyContext";
 
-export const CurrencySelector = () => {
+export function CurrencySelector() {
   const [currency, setCurrency] = useContext(CurrencyContext);
 
   const handleCurrencyChange = (event) => {
@@ -28,4 +28,4 @@ export const CurrencySelector = () => {
       </select>
     </>
   );
-};
+}

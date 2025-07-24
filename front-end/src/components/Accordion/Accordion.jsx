@@ -4,7 +4,7 @@ import { nanoid } from "nanoid";
 import ICON_ARROW from "../../assets/icon_arrow.svg";
 import css from "./Accordion.module.css";
 
-export const Accordion = ({ description, maintenanceInfo }) => {
+export function Accordion({ description, maintenanceInfo }) {
   // NOTE: toggle visibility
   // const [descriptionVisilbe, setDescriptionVisilbe] = useState(true);
   // const [maintenanceInfoVisilbe, setMaintenanceInfoVisilbe] = useState(true);
@@ -88,4 +88,4 @@ export const Accordion = ({ description, maintenanceInfo }) => {
       </ul>
     </>
   );
-};
+}

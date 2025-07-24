@@ -6,7 +6,7 @@ import ICON_DELETE from "../../assets/icon_delete.svg";
 import ICON_CART from "../../assets/icon_cart.svg";
 import css from "./FavouriteProduct.module.css";
 
-export const FavouriteProduct = ({ product, favouriteId }) => {
+export function FavouriteProduct({ product, favouriteId }) {
   const fetcher = useFetcher();
   const { Form } = fetcher;
   const [currency] = useContext(CurrencyContext);
@@ -90,4 +90,4 @@ export const FavouriteProduct = ({ product, favouriteId }) => {
       </div>
     </>
   );
-};
+}

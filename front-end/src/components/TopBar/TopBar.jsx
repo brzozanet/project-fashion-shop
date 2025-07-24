@@ -1,9 +1,9 @@
 import css from "./TopBar.module.css";
 
-export const TopBar = ({ children }) => {
+export function TopBar({ children }) {
   return (
     <>
       <div className={css.topBar}>{children}</div>
     </>
   );
-};
+}

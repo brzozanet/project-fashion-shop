@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 import ICON_ARROW from "../../assets/icon_arrow.svg";
 import css from "./ExpandableMenu.module.css";
 
-export const ExpandableMenu = () => {
+export function ExpandableMenu() {
   const params = useParams();
   const activeGenderText = GENDERS_TEXT_MAPPING.get(params.gender);
   const activeCategory = params.category;
@@ -59,4 +59,4 @@ export const ExpandableMenu = () => {
       </div>
     </>
   );
-};
+}

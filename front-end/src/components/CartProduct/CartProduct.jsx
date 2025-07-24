@@ -4,7 +4,7 @@ import { CartContext } from "../../contexts/CartContext";
 import ICON_DELETE from "../../assets/icon_delete.svg";
 import css from "./CartProduct.module.css";
 
-export const CartProduct = ({ id, brand, name, image, description, price }) => {
+export function CartProduct({ id, brand, name, image, description, price }) {
   const [currency] = useContext(CurrencyContext);
   const [shoppingCart, setShoppingCart] = useContext(CartContext);
 
@@ -64,4 +64,4 @@ export const CartProduct = ({ id, brand, name, image, description, price }) => {
       </div>
     </>
   );
-};
+}

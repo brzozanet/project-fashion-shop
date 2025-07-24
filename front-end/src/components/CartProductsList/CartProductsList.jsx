@@ -5,7 +5,7 @@ import { CartContext } from "../../contexts/CartContext";
 import { nanoid } from "nanoid";
 import css from "./CartProductsList.module.css";
 
-export const CartProductsList = () => {
+export function CartProductsList() {
   const [currency] = useContext(CurrencyContext);
   const [shoppingCart] = useContext(CartContext);
 
@@ -29,4 +29,4 @@ export const CartProductsList = () => {
       </div>
     </>
   );
-};
+}
